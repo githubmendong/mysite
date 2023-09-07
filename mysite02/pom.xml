@@ -62,7 +62,7 @@
                 </configuration>
             </plugin>
         </plugins>
-        <finalName>emaillist02</finalName>
+        <finalName>mysite02</finalName>
 
     </build>
 </project>
