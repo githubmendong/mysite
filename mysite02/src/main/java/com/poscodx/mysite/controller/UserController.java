@@ -2,6 +2,11 @@ package com.poscodx.mysite.controller;
 
 import com.poscodx.mysite.dao.UserDao;
 import com.poscodx.mysite.vo.UserVo;
+import com.poscodx.mysite.web.mvc.user.JoinAction;
+import com.poscodx.mysite.web.mvc.user.JoinFormAction;
+import com.poscodx.mysite.web.mvc.user.JoinSuccessAction;
+import com.poscodx.mysite.web.mvc.user.UserActionFactory;
+import com.poscodx.web.mvc.Action;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,40 +22,12 @@ public class UserController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
 
-        String action = request.getParameter("a");
-
-        if("joinform".equals(action)) {
-            request
-                    .getRequestDispatcher("/WEB-INF/views/user/joinform.jsp")
-                    .forward(request, response);
-        } else if("join".equals(action)){
-            String name = request.getParameter("name");
-            String email = request.getParameter("email");
-            String password = request.getParameter("password");
-            String gender = request.getParameter("gender");
-
-
-
-            UserVo userVo = new UserVo();
-            userVo.setName(name);
-            userVo.setEmail(email);
-            userVo.setPassword(password);
-            userVo.setGender(gender);
-
-            new UserDao().insert(userVo);
-
-            System.out.println(name + " : " + email + " : " + "password" + " : " + password + gender);
-
-            response.sendRedirect(request.getContextPath() + "/user?a=joinsuccess");
-        } else if("joinsuccess".equals(action)) {
-            request
-                    .getRequestDispatcher("/WEB-INF/views/user/joinsuccess.jsp")
-                    .forward(request, response);
-        }
+        String actionName = request.getParameter("a");
+        Action.action = new UserActionFactory().getAction(actionName);
+        action.execute(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
-
 }
