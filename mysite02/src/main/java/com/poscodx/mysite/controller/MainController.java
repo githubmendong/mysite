@@ -1,9 +1,11 @@
 package com.poscodx.mysite.controller;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 
+@WebServlet ("/main")
 public class MainController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
