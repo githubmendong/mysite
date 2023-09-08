@@ -21,6 +21,8 @@ public class GuestbookController extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         String action = request.getParameter("a");
 
+        System.out.println(action);
+
         if("insert".equals(action)) {
             String name = request.getParameter("name");
             String password = request.getParameter("pass");
@@ -32,6 +34,8 @@ public class GuestbookController extends HttpServlet {
             vo.setContents(contents);
 
             new GuestBookDao().insert(vo);
+
+            // System.out.println("test");
 
             response.sendRedirect("/mysite02/guestbook");
         } else if("deleteform".equals(action)) {
