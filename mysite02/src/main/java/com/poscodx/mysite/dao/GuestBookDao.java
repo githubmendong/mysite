@@ -20,6 +20,7 @@ public class GuestBookDao {
 			conn = DriverManager.getConnection(url, "webdb", "webdb");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
+			System.out.println("드라이버 로딩 실패:" + e);
 		}
 		return conn;
 	}
@@ -37,7 +38,7 @@ public class GuestBookDao {
 
 			pstmt.setString(1, vo.getName());
 			pstmt.setString(2, vo.getPassword());
-			pstmt.setString(3, vo.getContens());
+			pstmt.setString(3, vo.getContents());
 
 			pstmt.executeUpdate();
 
@@ -89,7 +90,7 @@ public class GuestBookDao {
 	}
 
 	// insert
-	public boolean checkPassword(int no, String password) {
+	public boolean checkPassword(long no, String password) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -101,9 +102,9 @@ public class GuestBookDao {
 			String sql = "select if(no=? and password=?, true, false) " + "from guestbook where no=?";
 			pstmt = conn.prepareStatement(sql);
 
-			pstmt.setInt(1, no);
+			pstmt.setLong(1, no);
 			pstmt.setString(2, password);
-			pstmt.setInt(3, no);
+			pstmt.setLong(3, no);
 
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
@@ -144,7 +145,7 @@ public class GuestBookDao {
 			rs = pstmt.executeQuery();
 
 			while (rs.next()) {
-				int no = rs.getInt(1);
+				Long no = (long) rs.getInt(1);
 				String name = rs.getString(2);
 				String contents = rs.getString(3);
 				String regDate = rs.getString(4);
@@ -152,7 +153,7 @@ public class GuestBookDao {
 				GuestBookVo vo = new GuestBookVo();
 				vo.setNo(no);
 				vo.setName(name);
-				vo.setContens(contents);
+				vo.setContents(contents);
 				vo.setRegDate(regDate);
 
 				result.add(vo);

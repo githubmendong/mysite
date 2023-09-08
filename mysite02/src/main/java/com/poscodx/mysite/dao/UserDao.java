@@ -63,5 +63,58 @@ public class UserDao {
         return result;
     }
 
+    public UserVo findByEmailAndPassword(String email, String password) {
+        UserVo userVo = null;
+
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+
+        try {
+            conn = getConnection();
+
+            String sql =
+                    "select no, name" +
+                            "  from user" +
+                            " where email=?" +
+                            "   and password=password(?)";
+
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, email);
+            pstmt.setString(2, password);
+
+            rs = pstmt.executeQuery();
+
+            //5. 결과 처리
+            if(rs.next()) {
+                Long no = rs.getLong(1);
+                String name = rs.getString(2);
+
+                userVo = new UserVo();
+                userVo.setNo(no);
+                userVo.setName(name);
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Error:" + e);
+        } finally {
+            try {
+                if(rs != null) {
+                    rs.close();
+                }
+                if(pstmt != null) {
+                    pstmt.close();
+                }
+                if(conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return userVo;
+    }
+
 
 }

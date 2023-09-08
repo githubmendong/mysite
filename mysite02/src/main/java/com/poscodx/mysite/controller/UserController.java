@@ -23,7 +23,7 @@ public class UserController extends HttpServlet {
         request.setCharacterEncoding("utf-8");
 
         String actionName = request.getParameter("a");
-        Action.action = new UserActionFactory().getAction(actionName);
+        Action action = new UserActionFactory().getAction(actionName);
         action.execute(request, response);
     }
 

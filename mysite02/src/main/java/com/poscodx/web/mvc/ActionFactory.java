@@ -19,5 +19,5 @@ import java.util.ServiceConfigurationError;
 //        |--- DeleteFormAction
 //        |--- DeleteAction
 public interface ActionFactory {
-    public void execute(HttpServletRequest request, HttpServletResponse response) throws ServiceConfigurationError;
+    Action getAction(String actionName);
 }

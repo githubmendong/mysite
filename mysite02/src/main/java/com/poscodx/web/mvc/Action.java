@@ -1,7 +1,9 @@
 package com.poscodx.web.mvc;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.ServiceConfigurationError;
 
 // com.poscodx.web.mvc
@@ -24,5 +26,5 @@ import java.util.ServiceConfigurationError;
 //  |-- IndexAction
 //  |-- Action
 public interface Action {
-    public void execute(HttpServletRequest request, HttpServletResponse response) throws ServiceConfigurationError;
+    public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException;
 }
