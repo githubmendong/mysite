@@ -326,3 +326,17 @@ j
 Lmysite02/src/main/java/com/poscodx/mysite/web/mvc/user/UpdateformAction.java,1\a\1afc3a7f42a6d03f93c7f6dd4de98f933f27caf0
 j
 :mysite02/src/main/java/com/poscodx/web/EncodingFilter.java,3\f\3f532520ae6b409bba85bef6ea53a28ab382f624
+z
+Jmysite02/src/main/java/com/poscodx/mysite/web/mvc/guestbook/AddAction.java,3\1\31b4dc53cd15cf95a04196e630ca54783bf29619
+~
+Nmysite02/src/main/java/com/poscodx/mysite/web/mvc/guestbook/CookieServlet.java,a\8\a8844d3a4dbb6300b25414bee1ab980659c68fea
+}
+Mmysite02/src/main/java/com/poscodx/mysite/web/mvc/guestbook/DeleteAction.java,2\2\22178318b7aae6c8bd230a79cb82f6988645100d
+Å
+Qmysite02/src/main/java/com/poscodx/mysite/web/mvc/guestbook/DeleteFormAction.java,9\d\9d3649f68dee3b457c3993c6d10af0e43a9dde84
+á
+Wmysite02/src/main/java/com/poscodx/mysite/web/mvc/guestbook/GuestbookActionFactory.java,1\0\10d216ffb18591818eeddf2f22397c676b36aa5b
+i
+9mysite02/src/main/webapp/WEB-INF/views/guestbook/list.jsp,4\9\4995701f288a3388dfbbd11be57c9582a6c5e774
+{
+Kmysite02/src/main/java/com/poscodx/mysite/web/mvc/guestbook/ListAction.java,2\c\2c8afec0ef970c1fb36f05565111b8918c0630a7

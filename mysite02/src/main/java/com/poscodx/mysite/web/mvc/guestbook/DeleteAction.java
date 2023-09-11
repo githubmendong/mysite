@@ -6,7 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.poscodx.mysite.dao.GuestbookDao;
+import com.poscodx.mysite.dao.GuestBookDao;
 import com.poscodx.web.mvc.Action;
 
 public class DeleteAction implements Action {
@@ -16,7 +16,7 @@ public class DeleteAction implements Action {
 		Long no = Long.parseLong(sno);
 		String password = request.getParameter("password");
 		
-		new GuestbookDao().deleteByNoAndPassword(no, password);
+		new GuestBookDao().checkPassword(no, password);
 		response.sendRedirect(request.getContextPath() + "/guestbook");
 	}
 }
