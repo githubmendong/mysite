@@ -9,13 +9,22 @@ import java.io.IOException;
 public class EncodingFilter extends HttpServlet implements Filter {
 
     private static final long serivalVersionUID = 1L;
+    private String encoding;
     @Override
     public void init(FilterConfig fConfig) throws ServletException{
-
+        encoding = fConfig.getInitParameter("encoding");
+        if (encoding == null){
+            encoding = "utf-8";
+        }
     }
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+        /* request 처리*/
+        //        boolean existJSessionId = false;
+        request.setCharacterEncoding(encoding);
+        chain.doFilter(request,response);
+
 
     }
 
