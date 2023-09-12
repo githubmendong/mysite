@@ -1,84 +1,87 @@
 # mysite 신동헌
-### [controller]()
- * [BoardController.java]()
- * [GuestbookController.java]()
- * [MainController.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fcontroller%2FMainController.java)
- * [UserController.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fcontroller%2FUserController.java)
 
+## 최종 과제
 
-### [dao](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fdao)   
-* [GuestBookDao.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fdao%2FGuestBookDao.java)
-* [UserDao.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fdao%2FUserDao.java)
-
-### [vo](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fdao)
-* [GuestBookVo.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fvo%2FGuestBookVo.java)
-* [UserVo.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fvo%2FUserVo.java)
-
-### [controller]()
-* [AddAction.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fguestbook%2FAddAction.java)
-* [CookieServlet.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fguestbook%2FCookieServlet.java)
-* [DeleteAction.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fguestbook%2FDeleteAction.java)
-* [DeleteFormAction.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fguestbook%2FDeleteFormAction.java)
-* [GuestbookActionFactory.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fguestbook%2FGuestbookActionFactory.java)
-* [ListAction.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fguestbook%2FListAction.java)
-
-
-
-### [main](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fmain)
-* [MainAction.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fmain%2FMainAction.java)
-* [MainActionFactory.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fmain%2FMainActionFactory.java)
-
-### [user](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fuser)
-* [JoinAction.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fuser%2FJoinAction.java)
-* [JoinFormAction.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fuser%2FJoinFormAction.java)
-* [JoinSuccessAction.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fuser%2FJoinSuccessAction.java)
-* [LoginAction.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fuser%2FLoginAction.java)
-* [LoginformAction.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fuser%2FLoginformAction.java)
-* [LogoutAction.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fuser%2FLogoutAction.java)
-* [UpdateAction.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fuser%2FUpdateAction.java)
-* [UpdateformAction.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fuser%2FUpdateformAction.java)
-* [UserActionFactory.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fuser%2FUserActionFactory.java)
-
-### [utils](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Futils)
-* [WebUtil.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Futils%2FWebUtil.java)
-
-
-### [mvc](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fweb%2Fmvc)
-* [Action.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fweb%2Fmvc%2FAction.java)
-* [ActionFactory.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fweb%2Fmvc%2FActionFactory.java)   
-
-### [EncodingFilter.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fweb%2FEncodingFilter.java)
 
 
 ---
 
-### [views](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews)   
-* [board](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fboard)
-* [list.jsp](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fboard%2Flist.jsp)
-* [modify.jsp](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fboard%2Fmodify.jsp)
-* [view.jsp](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fboard%2Fview.jsp)
-* [write.jsp](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fboard%2Fwrite.jsp)
+### [controller](https://github.com/githubmendong/mysite/tree/main/mysite02/src/main/java/com/poscodx/mysite/controller)
+ * [BoardController.java](https://github.com/githubmendong/mysite/blob/main/mysite02/src/main/java/com/poscodx/mysite/controller/BoardController.java)
+ * [GuestbookController.java](https://github.com/githubmendong/mysite/blob/main/mysite02/src/main/java/com/poscodx/mysite/controller/GuestbookController.java)
+ * [MainController.java](https://github.com/githubmendong/mysite/blob/main/mysite02/src/main/java/com/poscodx/mysite/controller/MainController.java)
+ * [UserController.java](https://github.com/githubmendong/mysite/blob/main/mysite02/src/main/java/com/poscodx/mysite/controller/FUserController.java)
 
-### [guestbook](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fguestbook)
-* [deleteform.jsp](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fguestbook%2Fdeleteform.jsp)
-* [index.jsp](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fguestbook%2Findex.jsp)
-* [list.jsp](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fguestbook%2Flist.jsp)
+### [dao](dao)   
+* [GuestBookDao.java](GuestBookDao.java)
+* [UserDao.java](UserDao.java)
 
-### [includes](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fincludes)
-* [footer.jsp](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fincludes%2Ffooter.jsp)
-* [header.jsp](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fincludes%2Fheader.jsp)
-* [navigation.jsp](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fincludes%2Fnavigation.jsp)
+### [vo]( dao)
+* [GuestBookVo.java](GuestBookVo.java)
+* [UserVo.java](UserVo.java)
 
-### [main](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fmain)
-* [index.jsp](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fmain%2Findex.jsp)
+### [controller]()
+* [AddAction.java]( AddAction.java)
+* [CookieServlet.java]( CookieServlet.java)
+* [DeleteAction.java](   DeleteAction.java)
+* [DeleteFormAction.java](   DeleteFormAction.java)
+* [GuestbookActionFactory.java](   GuestbookActionFactory.java)
+* [ListAction.java](   ListAction.java)
 
-### [user](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fuser)
-* [joinform.jsp](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fuser%2Fjoinform.jsp)
-* [joinsuccess.html](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fuser%2Fjoinsuccess.html)
-* [joinsuccess.jsp](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fuser%2Fjoinsuccess.jsp)
-* [loginform.jsp](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fuser%2Floginform.jsp)
-* [updateform.jsp](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fuser%2Fupdateform.jsp)
+### [main](  main)
+* [MainAction.java](  main%2FMainAction.java)
+* [MainActionFactory.java](  main%2FMainActionFactory.java)
+
+### [user](  user)
+* [JoinAction.java](   JoinAction.java)
+* [JoinFormAction.java](   JoinFormAction.java)
+* [JoinSuccessAction.java](   JoinSuccessAction.java)
+* [LoginAction.java](   LoginAction.java)
+* [LoginformAction.java](   LoginformAction.java)
+* [LogoutAction.java](   LogoutAction.java)
+* [UpdateAction.java](   UpdateAction.java)
+* [UpdateformAction.java](   UpdateformAction.java)
+* [UserActionFactory.java](  UserActionFactory.java)
+
+### [utils]( utils)
+* [WebUtil.java](WebUtil.java)
+
+### [mvc](mvc)
+* [Action.java](Action.java)
+* [ActionFactory.java](ActionFactory.java)   
+
+### [EncodingFilter.java](EncodingFilter.java)
 
 
-### [web.xml](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fweb.xml)
-### [pom.xml](mysite02%2Fpom.xml)
+---
+
+### [views]( views)   
+* [board](  board)
+* [list.jsp](   list.jsp)
+* [modify.jsp](   modify.jsp)
+* [view.jsp](   view.jsp)
+* [write.jsp](   write.jsp)
+
+### [guestbook](  guestbook)
+* [deleteform.jsp](  deleteform.jsp)
+* [index.jsp](  index.jsp)
+* [list.jsp](  list.jsp)
+
+### [includes](  includes)
+* [footer.jsp]( footer.jsp)
+* [header.jsp](  header.jsp)
+* [navigation.jsp](navigation.jsp)
+
+### [main](  main)
+* [index.jsp](index.jsp)
+
+### [user](  user)
+* [joinform.jsp](  joinform.jsp)
+* [joinsuccess.html](  joinsuccess.html)
+* [joinsuccess.jsp](  joinsuccess.jsp)
+* [loginform.jsp](  loginform.jsp)
+* [updateform.jsp](  updateform.jsp)
+
+
+### [web.xml]( web.xml)
+### [pom.xml](pom.xml)
