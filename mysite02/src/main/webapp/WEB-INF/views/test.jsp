@@ -1,59 +1,87 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%@page import="java.util.List"%>
+<%@ page import="com.poscodx.mysite.vo.BoardVo" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+
+<%
+    List<BoardVo> list = (List<BoardVo>)request.getAttribute("list");
+%>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>게시판 페이징처리</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>mysite</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link href="${pageContext.request.contextPath }/assets/css/board.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div>
-    시작 버튼 : ${p.startPage}
-    마지막 버튼 : ${p.endPage}
+<div id="container">
+    <c:import url="/WEB-INF/views/includes/header.jsp"/>
+    <div id="content">
+        <div id="board">
+            <form id="search_form" action="" method="post">
+                <input type="text" id="kwd" name="kwd" value="">
+                <input type="submit" value="찾기">
+            </form>
+            <table class="tbl-ex">
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>글쓴이</th>
+                    <th>조회수</th>
+                    <th>작성일</th>
+                    <th>&nbsp;</th>
+                </tr>
+                <%
+                    int count = list.size();
+                    for (BoardVo vo : list) {
+                %>
+
+                <tr>
+                    <td><%=count-- %></td>
+                    <td style="text-align:left; padding-left:${0*20}px">
+                        <a href="board?a=view&no=<%=vo.getNo() %>"><%=vo.getTitle() %>.</a>
+                    </td>
+                    <td><%=vo.getUserName() %></td>
+                    <td><%=vo.getHit() %></td>
+                    <td><%=vo.getRegDate() %></td>
+                    <td><a href="" class="del">삭제</a></td>
+                </tr>
+                <%
+                    }
+                %>
+            </table>
+
+            <!-- pager 추가 -->
+            <div class="pager">
+                <ul>
+                    <li><a href="">◀</a></li>
+                    <li><a href="">1</a></li>
+                    <li class="selected">2</li>
+                    <li><a href="">3</a></li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li><a href="">▶</a></li>
+                </ul>
+            </div>
+            <!-- pager 추가 -->
+
+            <div class="bottom">
+                <c:choose>
+                    <c:when test="${not empty authUser }">
+
+                        <a href="board?a=writeform" id="new-book">글쓰기</a>
+                    </c:when>
+                </c:choose>
+
+            </div>
+
+        </div>
+    </div>
+    <c:import url="/WEB-INF/views/includes/navigation.jsp"/>
+    <c:import url="/WEB-INF/views/includes/footer.jsp"/>
 </div>
-
-<div class="jumbotron">
-    <h1>페이징 처리 연습</h1>
-
-</div>
-<div class="container">
-    <table class="table">
-        <tr>
-            <th>번호</th>
-            <th>제목</th>
-            <th>작성자</th>
-            <th>작성일</th>
-        </tr>
-        <c:forEach items="${list}" var="b">
-            <tr>
-                <td>${b.bno}</td>
-                <td>${b.title}</td>
-                <td>${b.writer}</td>
-                <td>${b.writedate}</td>
-            </tr>
-        </c:forEach>
-    </table>
-    <ul class="pagination d-flex justify-content-center">
-        <c:if test="${p.prev}">
-            <li class="page-item"><a class="page-link" href="?pageNum =${p.startPage-1}">Previous</a></li>
-        </c:if>
-
-        <c:forEach begin="${p.startPage}" end="${p.endPage}" var="pageBtn">
-            <li class="page-item ${pageBtn==param.pageNum?'active' : ''}">
-                <a class="page-link" href="?pageNum=${pageBtn}">${pageBtn}</a>
-            </li>
-        </c:forEach>
-        <c:if test="${p.next}">
-            <li class="page-item"><a class="page-link" href="?pageNum=${p.endPage+1}">Next</a></li>
-        </c:if>
-    </ul>
-</div>
-현재페이지 : ${param.pageNum}
-
 </body>
 </html>
