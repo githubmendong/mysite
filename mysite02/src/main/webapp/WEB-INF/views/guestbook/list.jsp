@@ -31,11 +31,16 @@
 				</table>
 			</form>
 			<ul>
+				<%
+					int count = list.size();
+		%>
+				<c:set var = "count" value="${fn:length(list)}" />
 				<c:forEach items="${list }" var="vo">
+					<c:set var = "count" value="${fn:length(list)}" />
 					<li>
 						<table>
 							<tr>
-								<td>[${vo.no }]</td>
+								<td>[${count-1 }]</td>
 								<td>${vo.name }</td>
 								<td>${vo.regDate }</td>
 								<td><a href="${pageContext.request.contextPath }/guestbook?a=deleteform&no=${vo.no }">삭제</a></td>

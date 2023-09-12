@@ -11,14 +11,14 @@ _
 java:S2259g"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8Üìœ§1
 _
 java:S2259F"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8˜¹óœ§1
+l
+java:S2095F"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ä×Óù8˜¹óœ§1
 m
 java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ä×Óù8Üìœ§1
 l
 java:S2095g"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ä×Óù8˜¹óœ§1
 l
 java:S2095%"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ä×Óù8İìœ§1
-l
-java:S2095F"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ä×Óù8˜¹óœ§1
 ]	java:S125"<This block of commented-out lines of code should be removed.(¿Ğàüÿÿÿÿ8œ¹óœ§1
 S
 java:S6437"6Revoke and change this password, as it is compromised.(ùà³„8œ¹óœ§1
