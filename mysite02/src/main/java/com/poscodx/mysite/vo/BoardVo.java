@@ -1,32 +1,17 @@
 package com.poscodx.mysite.vo;
 
-public class GuestBookVo {
+public class BoardVo {
     private Long no;
-    private String name;
+    private String title;
     private String contents;
-    private String password;
+    private int hit;
     private String regDate;
+    private Integer groupNo;
+    private Integer orderNo;
+    private Integer depth;
+    private Long userNo;
 
-    public Long getNo() {
-        return no;
-    }
-
-    public void setNo(Long no) {
+    public BoardVo(Long no) {
         this.no = no;
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getContents() {
-        return contents;
-    }
-
-    public void setContents(String contents) {
-        this.contents = contents;
-
+}
