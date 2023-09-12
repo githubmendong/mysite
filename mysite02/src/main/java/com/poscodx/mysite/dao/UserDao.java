@@ -103,6 +103,53 @@ public class UserDao {
         return result;
     }
 
+
+    public UserVo findByNo(Long no) {
+        UserVo vo = null;
+
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+
+        try {
+            conn = getConnection();
+
+            String sql = "select no, name, email, gender from user where no=?";
+            pstmt = conn.prepareStatement(sql);
+
+            pstmt.setLong(1, no);
+
+            rs = pstmt.executeQuery();
+
+            if(rs.next()) {
+                vo = new UserVo();
+
+                vo.setNo(rs.getLong(1));
+                vo.setName(rs.getString(2));
+                vo.setEmail(rs.getString(3));
+                vo.setGender(rs.getString(4));
+            }
+        } catch (SQLException e) {
+            System.out.println("error:" + e);
+        } finally {
+            try {
+                if(rs != null) {
+                    rs.close();
+                }
+                if(pstmt != null) {
+                    pstmt.close();
+                }
+                if(conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return vo;
+    }
+
     public UserVo findByEmailAndPassword(String email, String password) {
         UserVo userVo = null;
 

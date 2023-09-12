@@ -1,5 +1,6 @@
 package com.poscodx.mysite.web.mvc.user;
 
+import com.poscodx.mysite.dao.UserDao;
 import com.poscodx.mysite.vo.UserVo;
 import com.poscodx.mysite.web.utils.WebUtil;
 import com.poscodx.web.mvc.Action;
@@ -24,6 +25,10 @@ public class UpdateformAction implements Action {
         ///////////////////////////////////////////////////////
 
 
+        Long no = authUser.getNo();
+        UserVo userVo = new UserDao().findByNo(no);
+
+        request.setAttribute("userVo", userVo);
         WebUtil.forward("user/updateform", request, response);
 
     }
