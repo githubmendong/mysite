@@ -11,8 +11,6 @@
 - groupNo: 게시글 그룹 번호
 - orderNo: 게시글 순서
 - depth: 게시글 깊이
-- userNo: 게시글 작성자 번호
-- userName: 게시글 작성자 이름
 
 각 멤버 변수는 getter와 setter 메서드를 가지고 있습니다.   
 이 클래스는 toString() 메서드를 오버라이딩하여 객체의 정보를 문자열로 반환합니다.
