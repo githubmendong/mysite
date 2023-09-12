@@ -13,14 +13,6 @@ k
 ;mysite02/src/main/java/com/poscodx/mysite/HelloServlet.java,3\1\31cbff1d9a0de206a163343bd5e106ec6c7b6425
 R
 "mysite02/src/main/webapp/index.jsp,7\3\736811f6ae23ef4352b7bee6913d4cee177eaa50
-f
-6mysite02/src/main/webapp/WEB-INF/views/board/list.html,2\7\27ae8424b772e11ba17a5647dc7b901a30ffc6f3
-h
-8mysite02/src/main/webapp/WEB-INF/views/board/modify.html,a\e\ae607fea24f5ffe4b3c9e8d549d1a16b98ec720c
-f
-6mysite02/src/main/webapp/WEB-INF/views/board/view.html,b\d\bded538791aa8d49a97a91d59698278602cd2771
-g
-7mysite02/src/main/webapp/WEB-INF/views/board/write.html,6\b\6bcad4ad1e90c7322ad626c18b52b24a2c2998cc
 j
 :mysite02/src/main/webapp/WEB-INF/views/guestbook/index.jsp,1\0\10717b5932758e1245953cc5b776c8f7cf6d49c6
 e
@@ -45,8 +37,6 @@ o
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 Å
-Q.idea/sonarlint/securityhotspotstore/b/d/bded538791aa8d49a97a91d59698278602cd2771,3\2\32ba0e84fed083d87222a464de36e3d36c136f29
-Å
 Q.idea/sonarlint/securityhotspotstore/1/0/10717b5932758e1245953cc5b776c8f7cf6d49c6,b\0\b0fc33aa86ae2c98361fa417298c800e11bb6dfc
 Å
 Q.idea/sonarlint/securityhotspotstore/e/b/eb887703e161fa477d2d965e133a7d6bc9348527,d\8\d8921f0c8a966bf340b2ffe74aa251826be80ddd
@@ -59,8 +49,6 @@ S
 Å
 Q.idea/sonarlint/securityhotspotstore/f/2/f2b12e817151ba425d8c93f74996c93e525ecdac,4\0\408578d844050d66d958da0800d37342981e1fa5
 Å
-Q.idea/sonarlint/securityhotspotstore/6/b/6bcad4ad1e90c7322ad626c18b52b24a2c2998cc,9\6\962a4da12c3156ed1ddfed2f8490ac012f2ee139
-Å
 Q.idea/sonarlint/securityhotspotstore/c/5/c5c6ceb055cb6e7ed5043d9c62a4339976bf6836,7\1\7106694177d95d857e01348a049bb49b6134d319
 =
 mysite02/mvnw,7\9\793c9a855e32c0ddfe49d63a57d954f82ae0cdb7
@@ -70,8 +58,6 @@ A
 Q.idea/sonarlint/securityhotspotstore/d/8/d89554de48e81ac667e5e92fd92a4f813e5d4235,6\e\6e1da44a47d0e6d016eeef4a47c4f76e72b1bb59
 Å
 Q.idea/sonarlint/securityhotspotstore/2/7/278f65fe218851392c65efeb55aa04dc1aff9774,d\5\d54eb32da8ee01ce36c85f12084cca448ee7a34e
-Å
-Q.idea/sonarlint/securityhotspotstore/2/7/27ae8424b772e11ba17a5647dc7b901a30ffc6f3,f\9\f9269ef298f71304bcc94e51bcdd0aa3b7dc7489
 Å
 Q.idea/sonarlint/securityhotspotstore/f/9/f99e708278c2c4c64caf6b6e007b6abf24bc0fd2,5\8\58abb32aed0495ae58fb7a745db33726a7295d75
 ^
@@ -84,8 +70,6 @@ w
 G.idea/sonarlint/issuestore/3/3/33ff07442ca211a2009ee9cb5587fd1f2790fe5d,6\1\61a0cbdb6cd1c5d3ca07f1e1687517a9849ba57e
 w
 G.idea/sonarlint/issuestore/e/1/e15bbe7d1e4a876a0e62a2f6d3b291e99eb9d082,a\2\a23c2c9b4befee1da9a3a549e4416795fc46c459
-Å
-Q.idea/sonarlint/securityhotspotstore/a/e/ae607fea24f5ffe4b3c9e8d549d1a16b98ec720c,2\a\2aa66c0fef2125a42879c4d023344ca90d429c25
 i
 9mysite02/src/main/webapp/assets/js/jquery/jquery-1.9.0.js,1\1\1185c0898762820a6e5b33a390a9542e9842d248
 w
@@ -342,3 +326,19 @@ i
 9mysite02/src/main/webapp/WEB-INF/views/guestbook/list.jsp,4\9\4995701f288a3388dfbbd11be57c9582a6c5e774
 x
 Hmysite02/src/main/java/com/poscodx/mysite/web/mvc/user/UpdateAction.java,7\4\74edec4e7fa6bef81bc4f843f8eca08964f92b61
+e
+5mysite02/src/main/webapp/WEB-INF/views/board/view.jsp,8\3\83c86ee931b71fde65032553c7a6765f8608114e
+f
+6mysite02/src/main/webapp/WEB-INF/views/board/write.jsp,e\0\e0bee066da733957d2f61de24dd4a2ad54acb2ef
+g
+7mysite02/src/main/webapp/WEB-INF/views/board/modify.jsp,8\e\8ebd93adef32cb2b48aac54b00900392bd519dd9
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+e
+5mysite02/src/main/webapp/WEB-INF/views/board/list.jsp,0\5\0547cb99611f9c28a11d04270ef6c36f911d7863
+y
+Imysite02/src/main/java/com/poscodx/mysite/controller/BoardController.java,8\d\8d13f42fff3d3695f819cf565122910bf7a2f9d8
+m
+=mysite02/src/main/java/com/poscodx/mysite/web/utils/test.java,2\3\23d6dea2a4846c41bf85af94cc6b32a79a09487f
+_
+/mysite02/src/main/webapp/WEB-INF/views/test.jsp,0\9\098df828fd01cd271104e8c9532db900bc84a7b9
