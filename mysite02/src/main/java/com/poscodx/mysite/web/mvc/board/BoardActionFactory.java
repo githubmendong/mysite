@@ -20,7 +20,7 @@ public class BoardActionFactory implements ActionFactory {
 
         } else if ("add".equals(actionName)) {
             System.out.println("add");
-            action = new BoardAddAction();
+//            action = new BoardAddAction();
             
         } else {
 

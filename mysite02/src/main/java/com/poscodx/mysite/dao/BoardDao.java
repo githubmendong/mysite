@@ -39,7 +39,11 @@ public class BoardDao {
              Statement stmt = conn.createStatement()) {
             System.out.println("hihi");
 
-            String sql = "select * from board order by g_no desc, o_no asc";
+            String sql = "select a.no, a.title, b.name, a.hit, a.reg_date , a.user_no "
+                    + " from board a, user b"
+                    + " where a.user_no = b.no"
+                    + " order by g_no desc, o_no asc"; // 쿼리
+
 
             try (ResultSet rs = stmt.executeQuery(sql)) {
                 while (rs.next()) {
@@ -72,13 +76,13 @@ public class BoardDao {
     public Boolean write(BoardVo vo) {
         boolean result = false;
 
+        System.out.println("여기까지왔을까");
         Connection conn = null;
         PreparedStatement pstmt = null;
-        System.out.println("여기까지왔을까");
 
         try {
             conn = getConnection();
-            String sql = "insert into board values(null, ?, ?, ?, now(), (select max(g_no)+1), 1, 0)";
+            String sql = "insert into board values(null, ?, ?, now(), (select max(g_no)+1), 1, 0, ?)";
             pstmt = conn.prepareStatement(sql);
 
             pstmt.setString(1, vo.getTitle());

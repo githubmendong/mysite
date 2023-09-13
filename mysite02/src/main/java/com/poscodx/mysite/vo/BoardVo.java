@@ -87,6 +87,7 @@ public class BoardVo {
 
     public Long getUserNo() {
         return userNo;
+
     }
 
     public void setUserNo(Long userNo) {
