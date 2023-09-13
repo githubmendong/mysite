@@ -14,18 +14,17 @@ public class BoardWriteAction implements Action {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String title = request.getParameter("title");
-		System.out.println("tilte");
 		String contents = request.getParameter("contents");
-		System.out.println("tilte2");
 		String suserno = request.getParameter("no");
-		System.out.println("tilte3");
 		Long userno = Long.parseLong(suserno);
 
 		BoardVo vo = new BoardVo();
 		vo.setTitle(title);
 		vo.setContents(contents);
 		vo.setUserNo(userno);
-
+		System.out.println(title);
+		System.out.println(contents);
+		System.out.println(userno);
 		new BoardDao().write(vo);
 
 		response.sendRedirect(request.getContextPath() + "/board");

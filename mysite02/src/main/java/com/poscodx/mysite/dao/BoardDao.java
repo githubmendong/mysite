@@ -75,19 +75,21 @@ public class BoardDao {
     // write
     public Boolean write(BoardVo vo) {
         boolean result = false;
-
-        System.out.println("여기까지왔을까");
         Connection conn = null;
         PreparedStatement pstmt = null;
 
         try {
             conn = getConnection();
-            String sql = "insert into board values(null, ?, ?, now(), (select max(g_no)+1), 1, 0, ?)";
+            String sql = "INSERT INTO board "
+                    + "SELECT null, ?, ?, 0, NOW(), subquery.max_g_no + 1, 1, 1, ? "
+                    + "FROM (SELECT MAX(g_no) AS max_g_no FROM board) AS subquery";
+
             pstmt = conn.prepareStatement(sql);
 
             pstmt.setString(1, vo.getTitle());
             pstmt.setString(2, vo.getContents());
             pstmt.setLong(3, vo.getUserNo());
+
             int count = pstmt.executeUpdate();
 
             result = count == 1;
