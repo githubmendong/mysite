@@ -74,26 +74,19 @@ public class BoardDao {
 
         Connection conn = null;
         PreparedStatement pstmt = null;
+        System.out.println("여기까지왔을까");
 
         try {
-            // 1, 2
             conn = getConnection();
+            String sql = "insert into board values(null, ?, ?, ?, now(), (select max(g_no)+1), 1, 0)";
+            pstmt = conn.prepareStatement(sql);
 
-            // 3. statement 준비
-            String sql = "insert into board values(null, ?, ?, 0, now(), (select max(group_no)) + 1, 1, 0, ?)"; // 쿼리
-
-            pstmt = conn.prepareStatement(sql); // row값
-
-            // 4. binding
             pstmt.setString(1, vo.getTitle());
             pstmt.setString(2, vo.getContents());
             pstmt.setLong(3, vo.getUserNo());
+            int count = pstmt.executeUpdate();
 
-            // 5. 실행
-            int count = pstmt.executeUpdate(); // executeUpdate()는 insert등은 반영된 건수를 반환, create&drop은 -1을 반환
-
-            // 5. 결과처리
-            result = count == 1; // count == 1 << true
+            result = count == 1;
 
         } catch (SQLException e) {
             System.out.println("Error:" + e);

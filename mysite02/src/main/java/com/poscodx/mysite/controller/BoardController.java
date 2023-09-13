@@ -1,7 +1,6 @@
 package com.poscodx.mysite.controller;
 
-import com.poscodx.mysite.web.mvc.board.boardActionFactory;
-import com.poscodx.mysite.web.mvc.guestbook.GuestbookActionFactory;
+import com.poscodx.mysite.web.mvc.board.BoardActionFactory;
 import com.poscodx.web.mvc.Action;
 import com.poscodx.web.mvc.ActionFactory;
 
@@ -19,7 +18,7 @@ public class BoardController extends HttpServlet {
 //        request.getRequestDispatcher("/WEB-INF/views/board/list.jsp").forward(request, response);
         String actionName = request.getParameter("a");
 
-        ActionFactory af = new boardActionFactory();
+        ActionFactory af = new BoardActionFactory();
         Action action = af.getAction(actionName);
         action.execute(request, response);
 

@@ -42,9 +42,13 @@
                         <td>${vo.userName }</td>
                         <td>${vo.hit }</td>
                         <td>${vo.date }</td>
-                        <c:if test = "${authUser.no == vo.userNo}">
-                            <td><a href="${pageContext.request.contextPath}/board?a=delete&no=${vo.no }" class="del">삭제</a></td>
-                        </c:if>
+                    <c:if test="${authUser.no == vo.userNo }">
+                        <td>
+                            <a href="${pageContext.request.contextPath}/board/delete/${vo.no}/${authUser.no }" class="del">
+                                <img src="${pageContext.request.contextPath }/assets/images/reply.png" alt="Reply" />
+                            </a>
+                        </td>
+                    </c:if>
                     </tr>
                 </c:forEach>
 
@@ -65,7 +69,8 @@
 <%--            로그인 안하면 게시판 글쓰기 버튼 없어야 한다.--%>
             <c:if test = "${not empty authUser}">
                 <div class="bottom">
-                    <a href="${pageContext.request.contextPath}/board/write/${authUser.no}" id="new-book">글쓰기</a>
+                    <a href="${pageContext.request.contextPath}/board?a=write" id="new-book">글쓰기</a>
+<%--                        <a href="${pageContext.request.contextPath}/board/write" id="new-book">글쓰기</a>--%>
                 </div>
             </c:if>
 

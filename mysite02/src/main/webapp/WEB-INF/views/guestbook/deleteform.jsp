@@ -12,6 +12,8 @@
 <body>
 <div id="container">
     <c:import url="/WEB-INF/views/includes/header.jsp" />
+
+
     <div id="content">
         <div id="guestbook" class="delete-form">
             <form method="post" action="${pageContext.request.contextPath }/guestbook">
@@ -24,6 +26,9 @@
             <a href="${pageContext.request.contextPath }/guestbook">방명록 리스트</a>
         </div>
     </div>
+
+
+
     <c:import url="/WEB-INF/views/includes/navigation.jsp" />
     <c:import url="/WEB-INF/views/includes/footer.jsp" />
 </div>

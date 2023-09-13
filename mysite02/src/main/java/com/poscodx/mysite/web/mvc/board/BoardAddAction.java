@@ -8,9 +8,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
-public class AddAction implements Action {
+public class BoardAddAction implements Action {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action = request.getParameter("a");
@@ -30,11 +29,9 @@ public class AddAction implements Action {
 		vo.setGroupNo(groupNo);
 		vo.setOrderNo(orderNo);
 		vo.setDepth(depth);
+
 		new BoardDao().write(vo);
 		response.sendRedirect(request.getContextPath() + "/board");
 
-		List<BoardVo> list = new BoardDao().findAll();
-		request.setAttribute("list", list);
-		request.getRequestDispatcher("/WEB-INF/views/board/list.jsp").forward(request, response);
 	}
 }
