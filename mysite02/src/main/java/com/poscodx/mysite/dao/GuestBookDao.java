@@ -142,7 +142,7 @@ public class GuestBookDao {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		List<GuestBookVo> result = new ArrayList<GuestBookVo>();
-
+		System.out.println("hihi");
 		try {
 			conn = getConnection();
 

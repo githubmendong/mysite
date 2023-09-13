@@ -41,10 +41,10 @@
                             <a href="${pageContext.request.contextPath}/board?a=viewform&no=${vo.no }">${vo.title }</a></td>
                         <td>${vo.userName }</td>
                         <td>${vo.hit }</td>
-                        <td>${vo.reg_date }</td>
-<%--                        <c:if test = "${authUser.no == vo.userNo}">--%>
+                        <td>${vo.date }</td>
+                        <c:if test = "${authUser.no == vo.userNo}">
                             <td><a href="${pageContext.request.contextPath}/board?a=delete&no=${vo.no }" class="del">삭제</a></td>
-<%--                        </c:if>--%>
+                        </c:if>
                     </tr>
                 </c:forEach>
 
