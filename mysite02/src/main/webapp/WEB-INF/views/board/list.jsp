@@ -38,7 +38,7 @@
                 <tr>
                         <td>${count-status.index }</td> <!-- 번호 -->
                         <td style = "text-align:left; padding-left:${vo.depth }*20 px">
-                            <a href="${pageContext.request.contextPath}/board?a=viewform&no=${vo.no }">${vo.title }</a></td>
+                            <a href="${pageContext.request.contextPath}/board?a=view&no=${vo.no }">${vo.title }</a></td>
                         <td>${vo.userName }</td>
                         <td>${vo.hit }</td>
                         <td>${vo.date }</td>

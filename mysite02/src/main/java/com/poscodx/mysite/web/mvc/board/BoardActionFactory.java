@@ -18,9 +18,9 @@ public class BoardActionFactory implements ActionFactory {
             System.out.println("wrtie");
             action = new BoardWriteFromAction();
 
-        } else if ("add".equals(actionName)) {
-            System.out.println("add");
-//            action = new BoardAddAction();
+        } else if ("view".equals(actionName)) {
+            System.out.println("view");
+            action = new BoardViewAction();
             
         } else {
 

@@ -165,21 +165,14 @@ public class BoardDao {
         ResultSet rs = null;
 
         try {
-            // 1, 2
             conn = getConnection();
-
-            // 3. statement 준비
-            String sql = "select title, contents, hit , user_no from board where no = ?"; // 쿼리
+            String sql = "select title, contents, hit , user_no from board where no = ?";
 
             pstmt = conn.prepareStatement(sql); // row값
 
-            // 4. binding
             pstmt.setLong(1, no);
-
-            // 5. 실행
             rs = pstmt.executeQuery();
 
-            // 6. 결과처리
             if (rs.next()) {
                 String title = rs.getString(1);
                 String contents = rs.getString(2);

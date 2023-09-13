@@ -53,7 +53,7 @@ prevPage(이전 페이지 번호) 등의 변수를 Controller에서 계산하여
 
 ## 진행과정
 
-MVC 적용 : 20점
+✅ MVC 적용 : 20점
 
     - 적절한 Model 사용( DAO, VO ) : 5점
     - 페이지 이동의 올바른 사용 ( redirection, fowarding ) : 5점
