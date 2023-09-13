@@ -25,6 +25,12 @@ import java.util.ServiceConfigurationError;
 //  |-- IndexAction
 //  |-- IndexAction
 //  |-- Action
+
+// com.poscodx.mysite.web.mvc.board
+//  |-- IndexAction
+//  |-- IndexAction
+//  |-- IndexAction
+//  |-- Action
 public interface Action {
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException;
 }

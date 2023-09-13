@@ -59,34 +59,40 @@ public class GuestBookDao {
 	}
 
 	// delete
-	public void delete(int no) {
+	public boolean delete(Long no, String password) {
+		boolean result = false;
+
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 
 		try {
 			conn = getConnection();
 
-			String sql = "delete from guestbook where no=?";
+			String sql = "delete from guestbook where no = ? and password = ?";
 			pstmt = conn.prepareStatement(sql);
+			pstmt.setLong(1, no);
+			pstmt.setString(2, password);
 
-			pstmt.setInt(1, no);
+			int count = pstmt.executeUpdate();
 
-			pstmt.executeUpdate();
-
+			result = count == 1;
 		} catch (SQLException e) {
-			System.out.println("SQLException : " + e);
+			System.out.println("Error:" + e);
 		} finally {
 			try {
-				if (conn != null) {
-					conn.close();
-				}
-				if (pstmt != null) {
+				if(pstmt != null) {
 					pstmt.close();
 				}
+
+				if(conn != null) {
+					conn.close();
+				}
 			} catch (SQLException e) {
-				System.out.println("SQLException : " + e);
+				e.printStackTrace();
 			}
 		}
+
+		return result;
 	}
 
 	// insert

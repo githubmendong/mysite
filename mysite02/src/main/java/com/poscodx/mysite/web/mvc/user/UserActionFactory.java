@@ -1,5 +1,7 @@
 package com.poscodx.mysite.web.mvc.user;
 
+import com.poscodx.mysite.web.mvc.guestbook.DeleteAction;
+import com.poscodx.mysite.web.mvc.guestbook.DeleteFormAction;
 import com.poscodx.mysite.web.mvc.main.MainAction;
 import com.poscodx.web.mvc.Action;
 import com.poscodx.web.mvc.ActionFactory;
@@ -24,6 +26,10 @@ public class UserActionFactory implements ActionFactory {
             action = new UpdateformAction();
         } else if("update".equals(actionName)) {
             action = new UpdateAction();
+        } else if("delete".equals(actionName)) {
+            action = new DeleteAction();
+        } else if("deleteform".equals(actionName)) {
+            action = new DeleteFormAction();
         } else {
             action = new MainAction();
         }

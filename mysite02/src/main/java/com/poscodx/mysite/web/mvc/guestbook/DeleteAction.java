@@ -16,7 +16,7 @@ public class DeleteAction implements Action {
 		Long no = Long.parseLong(sno);
 		String password = request.getParameter("password");
 		
-		new GuestBookDao().checkPassword(no, password);
+		new GuestBookDao().delete(no, password);
 		response.sendRedirect(request.getContextPath() + "/guestbook");
 	}
 }

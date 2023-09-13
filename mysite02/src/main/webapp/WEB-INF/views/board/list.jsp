@@ -1,3 +1,4 @@
+<%@ page import="com.poscodx.mysite.vo.GuestBookVo" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri= "http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri= "http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
@@ -32,18 +33,18 @@
                     <th>&nbsp;</th>
                 </tr>
 
-                <c:set var = 'count' value = '${fn:length(list) }' />
-                <c:forEach items = '${list }' var= 'vo' varStatus = 'status'>
-                    <tr>
-                        <td>${status.count }</td>
+                <c:set var='count' value='${fn:length(list) }' />
+                <c:forEach var="vo" items="${list }" varStatus="status">
+                <tr>
+                        <td>${count-status.index }</td> <!-- 번호 -->
                         <td style = "text-align:left; padding-left:${vo.depth }*20 px">
                             <a href="${pageContext.request.contextPath}/board?a=viewform&no=${vo.no }">${vo.title }</a></td>
                         <td>${vo.userName }</td>
                         <td>${vo.hit }</td>
-                        <td>${vo.date }</td>
-                        <c:if test = "${authUser.no == vo.userNo }">
+                        <td>${vo.reg_date }</td>
+<%--                        <c:if test = "${authUser.no == vo.userNo}">--%>
                             <td><a href="${pageContext.request.contextPath}/board?a=delete&no=${vo.no }" class="del">삭제</a></td>
-                        </c:if>
+<%--                        </c:if>--%>
                     </tr>
                 </c:forEach>
 
@@ -64,17 +65,14 @@
 <%--            로그인 안하면 게시판 글쓰기 버튼 없어야 한다.--%>
             <c:if test = "${not empty authUser}">
                 <div class="bottom">
-                    <a href="${pageContext.request.contextPath}/board?a=writeform" id="new-book">글쓰기</a>
+                    <a href="${pageContext.request.contextPath}/board/write/${authUser.no}" id="new-book">글쓰기</a>
                 </div>
             </c:if>
 
         </div>
     </div>
 
-    <!-- navigation -->
     <c:import url = "/WEB-INF/views/includes/navigation.jsp" />
-
-    <!-- footer -->
     <c:import url = "/WEB-INF/views/includes/footer.jsp" />
 
 </div>
