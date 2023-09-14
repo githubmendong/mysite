@@ -41,8 +41,9 @@ public class BoardVo {
         return hit;
     }
 
-    public void setHit(Long hit) {
+    public BoardVo setHit(Long hit) {
         this.hit = hit;
+        return null;
     }
 
     public String getDate() {

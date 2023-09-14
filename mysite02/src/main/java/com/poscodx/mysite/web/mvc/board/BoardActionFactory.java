@@ -22,7 +22,19 @@ public class BoardActionFactory implements ActionFactory {
             System.out.println("view");
             action = new BoardViewAction();
             
-        } else {
+        }else if ("delete".equals(actionName)) {
+            System.out.println("view");
+            action = new BoardDeleteAction();
+
+        } else if ("reply".equals(actionName)) {
+            System.out.println("reply");
+            action = new BoardRelpyFromAction();
+
+        } else if ("reply2".equals(actionName)) {
+            System.out.println("reply2");
+            action = new BoardReplyAction();
+
+        }   else {
 
             System.out.println("list");
             action = new BoardListAction();

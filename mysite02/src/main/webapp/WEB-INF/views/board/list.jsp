@@ -1,5 +1,7 @@
 <%@ page import="com.poscodx.mysite.vo.GuestBookVo" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%--<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>--%>
+
 <%@ taglib uri= "http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri= "http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri= "http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
@@ -44,8 +46,8 @@
                         <td>${vo.date }</td>
                     <c:if test="${authUser.no == vo.userNo }">
                         <td>
-                            <a href="${pageContext.request.contextPath}/board/delete/${vo.no}/${authUser.no }" class="del">
-                                <img src="${pageContext.request.contextPath }/assets/images/reply.png" alt="Reply" />
+                            <a href="${pageContext.request.contextPath}/board?a=delete&no=${vo.no }" class="del">
+                                <img src="${pageContext.request.contextPath }/assets/images/recycle.png" alt="Reply" />
                             </a>
                         </td>
                     </c:if>

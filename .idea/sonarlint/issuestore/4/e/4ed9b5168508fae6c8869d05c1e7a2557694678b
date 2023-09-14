@@ -1,22 +1,20 @@
 
 |
-java:S2293Š"YReplace the type specification in this constructor call with the diamond operator ("<>").(ó‘ïÒşÿÿÿÿ8×ç§1
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ó‘ïÒşÿÿÿÿ8×ç§1
 r
-java:S1192."PDefine a constant instead of duplicating this literal "SQLException : " 8 times.(ËÁš¦üÿÿÿÿ8¸óœ§1
-`
-java:S2259"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8—¹óœ§1
+java:S1192."PDefine a constant instead of duplicating this literal "SQLException : " 6 times.(ËÁš¦üÿÿÿÿ8¸óœ§1
 _
 java:S2259%"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8Üìœ§1
 _
-java:S2259g"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8Üìœ§1
+java:S2259H"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8—¹óœ§1
 _
-java:S2259F"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8˜¹óœ§1
+java:S2259m"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8˜¹óœ§1
+`
+java:S2259•"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8Üìœ§1
 l
-java:S2095F"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ä×Óù8˜¹óœ§1
+java:S2095m"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ä×Óù8˜¹óœ§1
 m
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ä×Óù8Üìœ§1
-l
-java:S2095g"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ä×Óù8˜¹óœ§1
+java:S2095•"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ä×Óù8Üìœ§1
 l
 java:S2095%"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ä×Óù8İìœ§1
 ]	java:S125"<This block of commented-out lines of code should be removed.(¿Ğàüÿÿÿÿ8œ¹óœ§1
@@ -25,9 +23,8 @@ java:S6437"6Revoke and change this password, as it is compromised.(ùà³„8œ¹óœ§
 G	java:S106"+Replace this use of System.out by a logger.(³îú–8Ÿ¹óœ§1
 L	java:S106."+Replace this use of System.out by a logger.(ËÁš¦üÿÿÿÿ8 ¹óœ§1
 L	java:S1068"+Replace this use of System.out by a logger.(ËÁš¦üÿÿÿÿ8¡¹óœ§1
-L	java:S106M"+Replace this use of System.out by a logger.(ËÁš¦üÿÿÿÿ8¢¹óœ§1
-L	java:S106W"+Replace this use of System.out by a logger.(ËÁš¦üÿÿÿÿ8£¹óœ§1
-L	java:S106u"+Replace this use of System.out by a logger.(ËÁš¦üÿÿÿÿ8¤¹óœ§1
-L	java:S106"+Replace this use of System.out by a logger.(ËÁš¦üÿÿÿÿ8§¹óœ§1
-M	java:S106£"+Replace this use of System.out by a logger.(ËÁš¦üÿÿÿÿ8¨¹óœ§1
-M	java:S106°"+Replace this use of System.out by a logger.(ËÁš¦üÿÿÿÿ8êìœ§1
+L	java:S106P"+Replace this use of System.out by a logger.(¶‰¼‚ıÿÿÿÿ8Çı‡ç¨1
+L	java:S106{"+Replace this use of System.out by a logger.(ËÁš¦üÿÿÿÿ8¢¹óœ§1
+M	java:S106…"+Replace this use of System.out by a logger.(ËÁš¦üÿÿÿÿ8£¹óœ§1
+M	java:S106¨"+Replace this use of System.out by a logger.(ËÁš¦üÿÿÿÿ8§¹óœ§1
+M	java:S106µ"+Replace this use of System.out by a logger.(ËÁš¦üÿÿÿÿ8ƒ‡…è¨1

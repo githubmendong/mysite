@@ -13,6 +13,7 @@
 </head>
 <body>
 <div id="container">
+    <form class="board-form" method="post" action="${pageContext.request.contextPath }/board?a=reply">
     <c:import url="/WEB-INF/views/includes/header.jsp"/>
 
     <div id="content">
@@ -35,16 +36,19 @@
                 </tr>
             </table>
             <div class="bottom">
-<%--                로그인 해야 사용가능--%>
+                <%--                로그인 해야 사용가능--%>
                 <a href="${pageContext.request.contextPath }/board">글목록</a>
                 <c:if test="${authUser.no == BoardVo.userNo }">
                     <a href="${pageContext.request.contextPath }/board">글수정</a>
                 </c:if>
+                <c:if test="${not empty authUser }">
+                    <a href="${pageContext.request.contextPath }/board?a=reply&no=${param.no }/${authUser.no }">답글</a>
+                </c:if>
             </div>
         </div>
     </div>
-    <c:import url = "/WEB-INF/views/includes/navigation.jsp" />
-    <c:import url = "/WEB-INF/views/includes/footer.jsp" />
+    <c:import url="/WEB-INF/views/includes/navigation.jsp"/>
+    <c:import url="/WEB-INF/views/includes/footer.jsp"/>
 </div>
 </body>
 </html>

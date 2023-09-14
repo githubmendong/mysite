@@ -33,6 +33,7 @@ public class BoardDao {
 //        List<BoardVo> result = new ArrayList<>();
         PreparedStatement pstmt = null;
 //        ResultSet rs = null;
+
         List<BoardVo> result = new ArrayList<BoardVo>();
         System.out.println("hihi2");
         try (Connection conn = getConnection();
@@ -112,7 +113,47 @@ public class BoardDao {
         return result;
     }
 
-    // deleteByNo
+
+    // write
+    public Boolean reply(BoardVo vo) {
+        boolean result = false;
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+
+        try {
+            conn = getConnection();
+            String sql = "INSERT INTO board "
+                    + "SELECT null, ?, ?, 0, NOW(), subquery.max_g_no + 1, 1, 1, ? "
+                    + "FROM (SELECT MAX(g_no) AS max_g_no FROM board) AS subquery";
+
+            pstmt = conn.prepareStatement(sql);
+
+            pstmt.setString(1, vo.getTitle());
+            pstmt.setString(2, vo.getContents());
+            pstmt.setLong(3, vo.getUserNo());
+
+            int count = pstmt.executeUpdate();
+
+            result = count == 1;
+
+        } catch (SQLException e) {
+            System.out.println("Error:" + e);
+        } finally {
+            try {
+                if (pstmt != null) {
+                    pstmt.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return result;
+    }
+
     public Boolean deleteByNo(Long no) {
         boolean result = false;
 
@@ -120,21 +161,13 @@ public class BoardDao {
         PreparedStatement pstmt = null;
 
         try {
-            // 1, 2
             conn = getConnection();
-
-            // 3. statement 준비
             String sql = "delete" + " from board" + " where no = ?";
 
-            pstmt = conn.prepareStatement(sql); // row값
-
-            // 4. Binding
+            pstmt = conn.prepareStatement(sql);
             pstmt.setLong(1, no);
 
-            // 5. SQL 실행
-            int count = pstmt.executeUpdate(); //
-
-            // 6. 결과처리
+            int count = pstmt.executeUpdate();
             result = count == 1;
 
         } catch (SQLException e) {
@@ -184,25 +217,31 @@ public class BoardDao {
                 result.setContents(contents);
                 result.setHit(hit);
                 result.setUserNo(userno);
+
+
             }
 
         } catch (SQLException e) {
             System.out.println("Error:" + e);
         } finally {
-            try {
-                if (pstmt != null) {
+            try{
+                if(rs !=null){
+                    rs.close();
+                }
+                if(pstmt !=null){
                     pstmt.close();
                 }
-                if (conn != null) {
+                if(conn !=null){
                     conn.close();
                 }
-            } catch (SQLException e) {
+            }catch(SQLException e){
                 e.printStackTrace();
             }
         }
 
         return result;
     }
+
 
     // update
     public boolean update(BoardVo vo) {
@@ -249,8 +288,6 @@ public class BoardDao {
         return result;
 
     }
-
-    // 조회수
     public boolean hit(BoardVo vo) {
         boolean result = false;
 
@@ -260,19 +297,12 @@ public class BoardDao {
         try {
 
             conn = getConnection();
-
-            // 3. statement 준비
-            String sql = "update board set hit = (SELECT(max(hit)+1)) where no = ?";
+            String sql =  "update board set hit=hit+1 where no=?";
 
             pstmt = conn.prepareStatement(sql); // row값
-
-            // 4. Binding
             pstmt.setLong(1, vo.getNo());
-
-            // 4. SQL 실행
             int count = pstmt.executeUpdate(); //
 
-            // 5. 결과처리
             result = count == 1;
 
         } catch (SQLException e) {
@@ -291,7 +321,6 @@ public class BoardDao {
         }
 
         return result;
-
     }
 
 
