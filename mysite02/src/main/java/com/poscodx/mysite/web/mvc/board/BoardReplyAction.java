@@ -16,8 +16,12 @@ import static com.poscodx.mysite.vo.BoardVo.*;
 
 
 public class BoardReplyAction implements Action {
+
+
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+
         HttpSession session = request.getSession();
         UserVo authUser = (UserVo) session.getAttribute("authUser");
 
