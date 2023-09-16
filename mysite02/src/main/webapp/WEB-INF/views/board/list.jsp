@@ -64,8 +64,6 @@
                         <td>${vo.hit}</td>
                         <td>${vo.regDate}</td>
 
-                            <%-- 삭제 링크에 대한 조건문 --%>
-
                             <%-- 로그인 사용자와 글 작성자가 동일한 경우에만 삭제 링크를 표시합니다. --%>
 
                         <c:set var="isSameUser" value="${authUser.no eq vo.userNo}"/>
