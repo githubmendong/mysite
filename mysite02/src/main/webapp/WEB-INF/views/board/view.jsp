@@ -13,9 +13,7 @@
 </head>
 <body>
 <div id="container">
-    <form class="board-form" method="post" action="${pageContext.request.contextPath }/board?a=reply">
-    <c:import url="/WEB-INF/views/includes/header.jsp"/>
-
+    <c:import url="/WEB-INF/views/includes/header.jsp" />
     <div id="content">
         <div id="board" class="board-form">
             <table class="tbl-ex">
@@ -24,31 +22,36 @@
                 </tr>
                 <tr>
                     <td class="label">제목</td>
-                    <td>${BoardVo.title }</td>
+                    <td>${title}</td>
                 </tr>
                 <tr>
                     <td class="label">내용</td>
                     <td>
-                        <div class="view-content">
-                            ${BoardVo.contents }
-                        </div>
+                        <div class="view-content" style="white-space: pre-line">${contents}</div>
                     </td>
                 </tr>
             </table>
             <div class="bottom">
-                <%--                로그인 해야 사용가능--%>
-                <a href="${pageContext.request.contextPath }/board">글목록</a>
-                <c:if test="${authUser.no == BoardVo.userNo }">
-                    <a href="${pageContext.request.contextPath }/board">글수정</a>
-                </c:if>
-                <c:if test="${not empty authUser }">
-                    <a href="${pageContext.request.contextPath }/board?a=reply&no=${param.no }/${authUser.no }">답글</a>
-                </c:if>
+                <a href="${pageContext.request.contextPath}/board?a=list">글목록</a>
+
+                <c:choose>
+                    <c:when test="${authUser.no eq userNo}">
+                        <div class="bottom">
+                            <a href="${pageContext.request.contextPath}/board?a=modifyform&no=${no}" id="new-book">글수정</a>
+                        </div>
+                    </c:when>
+                </c:choose>
+                <c:choose>
+                    <c:when test="${not empty authUser}">
+
+                        <a href="${pageContext.request.contextPath}/board?a=replyform&no=${no}">답글 달기</a>
+                    </c:when>
+                </c:choose>
             </div>
         </div>
     </div>
-    <c:import url="/WEB-INF/views/includes/navigation.jsp"/>
-    <c:import url="/WEB-INF/views/includes/footer.jsp"/>
+    <c:import url="/WEB-INF/views/includes/navigation.jsp" />
+    <c:import url="/WEB-INF/views/includes/footer.jsp" />
 </div>
 </body>
 </html>

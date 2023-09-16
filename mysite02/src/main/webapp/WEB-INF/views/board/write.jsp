@@ -13,41 +13,36 @@
 
 </head>
 <body>
-	<div id="container">
-		<c:import url="/WEB-INF/views/includes/header.jsp"/>
-
-
-		<div id="content">
-			<div id="board">
-				<form class="board-form" method="post" action="${pageContext.request.contextPath }/board?a=write2">
-					<input type = "hidden" name = "a" value="write">
-					<input type = "hidden" name = "no" value="${authUser.no}">
-					<table class="tbl-ex">
-						<tr>
-							<th colspan="2">글쓰기</th>
-						</tr>
-						<tr>
-							<td class="label">제목</td>
-							<td><input type="text" name="title" value=""></td>
-						</tr>
-						<tr>
-							<td class="label">내용</td>
-							<td>
-								<textarea id="content" name="contents"></textarea>
-							</td>
-						</tr>
-					</table>
-					<div class="bottom">
-						<a href="${pageContext.request.contextPath }/board">취소</a>
-						<input type="submit" value="등록">
-					</div>
-				</form>				
-			</div>
+<div id="container">
+	<c:import url="/WEB-INF/views/includes/header.jsp" />
+	<div id="content">
+		<div id="board">
+			<form class="board-form" method="post" action="${pageContext.request.contextPath}/board?a=write">
+				<input type = "hidden" name = "a" value="write">
+				<table class="tbl-ex">
+					<tr>
+						<th colspan="2">글쓰기</th>
+					</tr>
+					<tr>
+						<td class="label">제목</td>
+						<td><input type="text" name="title" value=""></td>
+					</tr>
+					<tr>
+						<td class="label">내용</td>
+						<td>
+							<textarea id="content" name="contents"></textarea>
+						</td>
+					</tr>
+				</table>
+				<div class="bottom">
+					<a href="${pageContext.request.contextPath}/board?a=board">취소</a>
+					<input type="submit" value="등록">
+				</div>
+			</form>
 		</div>
-
-
-		<c:import url = "/WEB-INF/views/includes/navigation.jsp" />
-		<c:import url = "/WEB-INF/views/includes/footer.jsp" />
 	</div>
+	<c:import url="/WEB-INF/views/includes/navigation.jsp" />
+	<c:import url="/WEB-INF/views/includes/footer.jsp" />
+</div>
 </body>
 </html>

@@ -330,8 +330,6 @@ i
 9mysite02/src/main/java/com/poscodx/mysite/vo/BoardVo.java,5\7\57b7e77cf49d27903cd86dfc8a21c83440b99da9
 Å
 Qmysite02/src/main/java/com/poscodx/mysite/web/mvc/board/BoardWriteFromAction.java,d\6\d6997a0b4dac4e3954360bdd816d99725de39b2f
-{
-Kmysite02/src/main/java/com/poscodx/mysite/web/mvc/board/BoardAddAction.java,3\d\3dab910e3f67c5a22cb9e6ca8d99529e7567283b
 }
 Mmysite02/src/main/java/com/poscodx/mysite/web/mvc/board/BoardWriteAction.java,1\9\19f523fdc7e085b202605df6f41d694e8a1c6878
 k
@@ -346,3 +344,15 @@ Nmysite02/src/main/java/com/poscodx/mysite/web/mvc/board/BoardDeleteAction.java
 Lmysite02/src/main/java/com/poscodx/mysite/web/mvc/board/BoardViewAction.java,e\d\edc13175609733dfa17a3d943764fa9fbd39b23a
 f
 6mysite02/src/main/webapp/WEB-INF/views/board/reply.jsp,9\3\93e57456ec230904b31afc74cb5053d6550afcdd
+w
+G.idea/sonarlint/issuestore/1/0/10717b5932758e1245953cc5b776c8f7cf6d49c6,9\a\9a8a511fc771807f245ad5500baaf4feaa316fff
+Å
+Qmysite02/src/main/java/com/poscodx/mysite/web/mvc/board/BoardRelpyFromAction.java,f\0\f0cc6288e21d16da99229a2631238cf310955842
+}
+Mmysite02/src/main/java/com/poscodx/mysite/web/mvc/board/BoardReplyAction.java,6\8\682f917907224748d44ecb46162334228c9155da
+y
+Imysite02/src/main/java/com/poscodx/mysite/web/mvc/board/ModifyAction.java,4\a\4a547a6041e99f7534355cd5e22f74c084079128
+}
+Mmysite02/src/main/java/com/poscodx/mysite/web/mvc/board/ModifyFormAction.java,2\8\2884e51b5b536e1a4b41d7629ec057aff5a93432
+y
+Imysite02/src/main/java/com/poscodx/mysite/web/mvc/board/PagingAction.java,0\f\0f379dd8c5846b8575393b56bad9eb7d45436bfa

@@ -16,13 +16,15 @@ import java.io.IOException;
 public class BoardViewAction implements Action {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String sno = request.getParameter("no");
-        Long no = Long.parseLong(sno);
+        Long no = Long.parseLong(request.getParameter("no"));
+        BoardVo boardvo = new BoardDao().findByNo(no);
+        new BoardDao().updateHit(no);
 
-        BoardVo vo = new BoardDao().findByNo(no);
-
-        request.setAttribute("BoardVo", vo);
-        request.getRequestDispatcher("WEB-INF/views/board/view.jsp").forward(request, response);
+        request.setAttribute("title", boardvo.getTitle());
+        request.setAttribute("contents", boardvo.getContents());
+        request.setAttribute("no", no);
+        request.setAttribute("userNo", boardvo.getUserNo());
+        WebUtil.forward("board/view", request, response);
 
     }
 }

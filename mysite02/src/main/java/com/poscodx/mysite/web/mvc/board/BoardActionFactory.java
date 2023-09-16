@@ -1,6 +1,8 @@
 package com.poscodx.mysite.web.mvc.board;
 
 
+import com.poscodx.mysite.web.mvc.guestbook.DeleteAction;
+import com.poscodx.mysite.web.mvc.guestbook.ListAction;
 import com.poscodx.web.mvc.Action;
 import com.poscodx.web.mvc.ActionFactory;
 
@@ -10,36 +12,27 @@ public class BoardActionFactory implements ActionFactory {
     public Action getAction(String actionName) {
         Action action = null;
 
-        if ("write2".equals(actionName)) {
-            System.out.println("wrtie2");
-            action = new BoardWriteAction();
-
-        } else if ("write".equals(actionName)) {
-            System.out.println("wrtie");
-            action = new BoardWriteFromAction();
-
-        } else if ("view".equals(actionName)) {
-            System.out.println("view");
+        if ("view".equals(actionName)) {
             action = new BoardViewAction();
-            
-        }else if ("delete".equals(actionName)) {
-            System.out.println("view");
+        } else if ("writeform".equals(actionName)) {
+            action = new BoardWriteFromAction();
+        } else if ("write".equals(actionName)) {
+            action = new BoardWriteAction();
+        } else if ("delete".equals(actionName)) {
             action = new BoardDeleteAction();
-
-        } else if ("reply".equals(actionName)) {
-            System.out.println("reply");
+        } else if ("replyform".equals(actionName)) {
             action = new BoardRelpyFromAction();
-
-        } else if ("reply2".equals(actionName)) {
-            System.out.println("reply2");
+        } else if ("reply".equals(actionName)) {
             action = new BoardReplyAction();
-
-        }   else {
-
-            System.out.println("list");
+        } else if ("page".equals(actionName)) {
+            action = new PagingAction();
+        } else if ("modifyform".equals(actionName)) {
+            action = new ModifyFormAction();
+        } else if ("modify".equals(actionName)) {
+            action = new ModifyAction();
+        } else {
             action = new BoardListAction();
         }
-
         return action;
     }
 }

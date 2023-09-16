@@ -7,7 +7,6 @@ W
 java:S1161 ":Add the "@Override" annotation above this method signature(‹¨¯¿8ùÒú‘¨1
 
 java:S1989!"_Handle the following exceptions that could be thrown by "doGet": ServletException, IOException.(®Ó‘ûÿÿÿÿÿ8ûÒú‘¨1
-X	java:S125$"<This block of commented-out lines of code should be removed.(ı«ã¾8öú‘¨1
 b
 java:S1128"@Remove this unused import 'com.poscodx.mysite.dao.GuestBookDao'.(ş¾Õûÿÿÿÿ8Ì‹®¸¨1
 [
