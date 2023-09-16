@@ -1,0 +1,13 @@
+
+U
+java:S18548"8Remove this useless assignment to local variable "list".(™ýª˜8½¨„å©1
+W
+java:S18546":Remove this useless assignment to local variable "second".(¼–Ö¾8ýÊ„å©1
+J
+java:S1481"-Remove this unused "authUser" local variable.(³®¹Ö8Úíüä©1
+H
+java:S1481"+Remove this unused "second" local variable.(µËì8Ûíüä©1
+J	java:S108$")Either remove or fill this block of code.(ƒôà®ýÿÿÿÿ8Üíüä©1
+F
+java:S14818")Remove this unused "list" local variable.(™ýª˜8Á¨„å©1
+]	java:S125>"<This block of commented-out lines of code should be removed.(Úò¹øÿÿÿÿ8°•þä©1
