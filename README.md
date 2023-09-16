@@ -29,15 +29,27 @@
 
 
 
-## 결과물
+# 결과물
 
+### 리스트, 글쓰기, 조회수
 ![img_1.png](img_1.png)
 
+### 페이지
 ![img_2.png](img_2.png)
 
+### 비로그인 글보기
 ![img_3.png](img_3.png)
 
-## 예외처리
+### 비로그인 글쓰기, 댓글 제한
+![img_7.png](img_7.png)
+
+### 검색
+![img_5.png](img_5.png)
+
+### 수정
+![img_6.png](img_6.png)
+
+### 예외처리
 ![img_4.png](img_4.png)
 
 
@@ -107,12 +119,28 @@ order_no 는 1, depth는 0 가 된다.
  * [UserController.java](https://github.com/githubmendong/mysite/blob/main/mysite02/src/main/java/com/poscodx/mysite/controller/FUserController.java)
 
 ### [dao](dao)   
+* [BoardDao.java]
 * [GuestBookDao.java](GuestBookDao.java)
 * [UserDao.java](UserDao.java)
 
 ### [vo]( dao)
+* [BoardVo.java]()
+* [PaginationVo.java]()
 * [GuestBookVo.java](GuestBookVo.java)
 * [UserVo.java](UserVo.java)
+
+### [board]
+* [BoardActionFactory.java]
+* [BoardDeleteAction.java]
+* [BoardListAction.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fboard%2FBoardListAction.java)
+* [BoardRelpyFromAction.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fboard%2FBoardRelpyFromAction.java)
+* [BoardReplyAction.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fboard%2FBoardReplyAction.java)
+* [BoardViewAction.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fboard%2FBoardViewAction.java)
+* [BoardWriteAction.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fboard%2FBoardWriteAction.java)
+* [BoardWriteFromAction.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fboard%2FBoardWriteFromAction.java)
+* [ModifyAction.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fboard%2FModifyAction.java)
+* [ModifyFormAction.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fboard%2FModifyFormAction.java)
+* [PagingAction.java](mysite02%2Fsrc%2Fmain%2Fjava%2Fcom%2Fposcodx%2Fmysite%2Fweb%2Fmvc%2Fboard%2FPagingAction.java)
 
 ### [controller]()
 * [AddAction.java]( AddAction.java)
@@ -148,6 +176,13 @@ order_no 는 1, depth는 0 가 된다.
 
 
 ---
+
+### [board]
+* [list.jsp](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fboard%2Flist.jsp)
+* [modify.jsp](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fboard%2Fmodify.jsp)
+* [reply.jsp](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fboard%2Freply.jsp)
+* [view.jsp](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fboard%2Fview.jsp)
+* [write.jsp](mysite02%2Fsrc%2Fmain%2Fwebapp%2FWEB-INF%2Fviews%2Fboard%2Fwrite.jsp)
 
 ### [views]( views)   
 * [board](  board)

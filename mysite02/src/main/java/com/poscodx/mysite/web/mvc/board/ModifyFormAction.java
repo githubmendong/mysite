@@ -16,21 +16,19 @@ public class ModifyFormAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String boardNo = request.getParameter("no");
+		String no = request.getParameter("no");
 		BoardDao boardDao = new BoardDao();
-		BoardVo boardVo;
+		BoardVo boardVo = boardDao.findByNo(Long.parseLong(no));
 
-		try {
-			boardVo = boardDao.findByNo(Long.parseLong(boardNo));
-		} catch (NumberFormatException e) {
-			e.printStackTrace();
+		HttpSession session = request.getSession();
+		UserVo authUser = (UserVo) session.getAttribute("authUser");
+
+		if (authUser == null || !authUser.getNo().equals(boardVo.getUserNo())) {
 			WebUtil.redirect(request.getContextPath() + "/board", request, response);
 			return;
 		}
 
-		if (!BoardVo.userHasPermission(request.getSession(), boardVo)) {
-			WebUtil.redirect(request.getContextPath() + "/board", request, response);
-        }
-
+		request.setAttribute("vo", boardVo);
+		WebUtil.forward("board/modify", request, response);
 	}
 }
