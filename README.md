@@ -32,25 +32,25 @@
 # 결과물
 
 ### 리스트, 글쓰기, 조회수
-![img_1.png](img_1.png)
+![img_1.png](mysite02/src/main/webapp/assets/images/img_1.png)
 
 ### 페이지
-![img_2.png](img_2.png)
+![img_2.png](mysite02/src/main/webapp/assets/images/img_2.png)
 
 ### 비로그인 글보기
-![img_3.png](img_3.png)
+![img_3.png](mysite02/src/main/webapp/assets/images/img_3.png)
 
 ### 비로그인 글쓰기, 댓글 제한
-![img_7.png](img_7.png)
+![img_7.png](mysite02/src/main/webapp/assets/images/img_7.png)
 
 ### 검색
-![img_5.png](img_5.png)
+![img_5.png](mysite02/src/main/webapp/assets/images/img_5.png)
 
 ### 수정
-![img_6.png](img_6.png)
+![img_6.png](mysite02/src/main/webapp/assets/images/img_6.png)
 
 ### 예외처리
-![img_4.png](img_4.png)
+![img_4.png](mysite02/src/main/webapp/assets/images/img_4.png)
 
 
 ## 최종 과제
