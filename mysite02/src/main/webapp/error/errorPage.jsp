@@ -16,12 +16,16 @@
 			<div id="user">
 				<p class="jr-success">
 					안돼! 돌아가!!
+					잘못된 접근 안돼!!
+
 					<br><br>
+					<img src="${pageContext.request.contextPath}/assets/images/증발루피.png" alt="이미지" style="width: 100px; height: auto;">
 					<br><br>
 					<br><br>
 					<a href="${pageContext.request.contextPath }/main">MySite 메인으로 돌아가기</a>
-				</p>				
+				</p>
 			</div>
+
 		</div>
 		<c:import url="/WEB-INF/views/includes/navigation.jsp" />
 		<c:import url="/WEB-INF/views/includes/footer.jsp" />

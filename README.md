@@ -1,5 +1,17 @@
 # mysite 신동헌
 
+## 결과물
+
+![img_1.png](img_1.png)
+
+![img_2.png](img_2.png)
+
+![img_3.png](img_3.png)
+
+## 예외처리
+![img_4.png](img_4.png)
+
+
 ## 최종 과제
 ```markdown
 
