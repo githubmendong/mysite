@@ -13,7 +13,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.poscodx.mysite.service.GuestbookService;
 import com.poscodx.mysite.vo.GuestbookVo;
 
+import javax.servlet.annotation.WebServlet;
+
 @Controller
+@WebServlet("/guestbook")
 @RequestMapping("/guestbook")
 public class GuestbookController {
 	@Autowired

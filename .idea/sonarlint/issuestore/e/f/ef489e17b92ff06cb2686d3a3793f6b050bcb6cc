@@ -1,0 +1,94 @@
+
+v
+java:S2293""YReplace the type specification in this constructor call with the diamond operator ("<>").(Ô”ú˜8¯£³å©1
+j
+java:S1192Ì"GDefine a constant instead of duplicating this literal "error " 4 times.(ÜÖ’¡üÿÿÿÿ8°£³å©1
+l
+java:S1192"NDefine a constant instead of duplicating this literal "update board " 3 times.(´“„ù8°£³å©1
+e
+java:S1192"GDefine a constant instead of duplicating this literal "error:" 8 times.(Œı’è8°£³å©1
+j
+java:S1192"GDefine a constant instead of duplicating this literal "Error:" 3 times.(¶‰¼‚ıÿÿÿÿ8¶úçå©1
+`
+java:S2259µ"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8‡§³å©1
+`
+java:S2259İ"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8ˆ§³å©1
+`
+java:S2259Ã"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8‡§³å©1
+`
+java:S2259Ñ"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8‡§³å©1
+`
+java:S2259ğ"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8‡§³å©1
+_
+java:S2259v"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8‡§³å©1
+`
+java:S2259ç"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8‡§³å©1
+`
+java:S2259Ê"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8‡§³å©1
+`
+java:S2259 "BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8‡§³å©1
+`
+java:S2259ø"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8‡§³å©1
+`
+java:S2259Ø"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8‡§³å©1
+`
+java:S2259£"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8«¿æ©1
+_
+java:S2259°"BA "NullPointerException" could be thrown; "conn" is nullable here.(ÿÌú"8‡§³å©1
+_
+java:S22590"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8‡§³å©1
+_
+java:S2259†"BA "NullPointerException" could be thrown; "conn" is nullable here.(ÿÌú"8ôıçå©1
+`
+java:S2259"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8‡§³å©1
+`
+java:S2259ú"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8ˆ§³å©1
+m
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ä×Óù8À®¶å©1
+m
+java:S2095ø"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ä×Óù8ˆ§³å©1
+l
+java:S20950"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ä×Óù8ˆ§³å©1
+m
+java:S2095£"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ä×Óù8«¿æ©1
+m
+java:S2095ç"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ä×Óù8ˆ§³å©1
+g
+java:S2583¬"DChange this condition so that it does not always evaluate to "false"(Ñ¿È©ûÿÿÿÿ8ˆ§³å©1
+g
+java:S2583Õ"DChange this condition so that it does not always evaluate to "false"(Ñ¿È©ûÿÿÿÿ8‹§³å©1
+]	java:S125"<This block of commented-out lines of code should be removed.(¿Ğàüÿÿÿÿ8‘§³å©1
+]	java:S125"<This block of commented-out lines of code should be removed.(ßÅîÿşÿÿÿÿ8•¾¡ó©1
+S
+java:S6437"6Revoke and change this password, as it is compromised.(ùà³„8‘§³å©1
+G	java:S106"+Replace this use of System.out by a logger.(³îú–8’§³å©1
+L	java:S106V"+Replace this use of System.out by a logger.(¡ì­˜úÿÿÿÿ8˜§³å©1
+L	java:S106n"+Replace this use of System.out by a logger.(ÜÈœ¯ÿÿÿÿÿ8œ§³å©1
+G	java:S106o"+Replace this use of System.out by a logger.(í—ßê8Ÿ§³å©1
+H	java:S106"+Replace this use of System.out by a logger.(Œı’è8¢§³å©1
+H	java:S106©"+Replace this use of System.out by a logger.(™ïÍ8¦§³å©1
+H	java:S106Ò"+Replace this use of System.out by a logger.(ÿ‡Ú‡8§§³å©1
+H	java:S106û"+Replace this use of System.out by a logger.(Œı’è8ª§³å©1
+Y	java:S125‹"<This block of commented-out lines of code should be removed.(äè¾Ò8¤§³å©1
+M	java:S106Ì"+Replace this use of System.out by a logger.(ÜÖ’¡üÿÿÿÿ8¬§³å©1
+M	java:S106Ö"+Replace this use of System.out by a logger.(ÜÖ’¡üÿÿÿÿ8®§³å©1
+H	java:S106î"+Replace this use of System.out by a logger.(Œı’è8®§³å©1
+H	java:S106™"+Replace this use of System.out by a logger.(úîÉ¹8²§³å©1
+O
+java:S1172¬",Remove this unused method parameter "depth".(ŒùÀ×ùÿÿÿÿ8«§³å©1
+H	java:S106½"+Replace this use of System.out by a logger.(Œı’è8µ§³å©1
+M	java:S106á"+Replace this use of System.out by a logger.(ÜÖ’¡üÿÿÿÿ8¶§³å©1
+M	java:S106ë"+Replace this use of System.out by a logger.(ÜÖ’¡üÿÿÿÿ8·§³å©1
+M	java:S106"+Replace this use of System.out by a logger.(¶‰¼‚ıÿÿÿÿ8¹§³å©1
+H	java:S106Á"+Replace this use of System.out by a logger.(Œı’è8À§³å©1
+N
+java:S1481Ø"+Remove this unused "result" local variable.(ĞĞî…ıÿÿÿÿ8¶§³å©1
+H	java:S106å"+Replace this use of System.out by a logger.(Œı’è8ğ®¶å©1
+M	java:S106”"+Replace this use of System.out by a logger.(¶‰¼‚ıÿÿÿÿ8—şçå©1
+M	java:S106·"+Replace this use of System.out by a logger.(¶‰¼‚ıÿÿÿÿ8˜şçå©1
+N
+java:S1481Ì"+Remove this unused "result" local variable.(ĞĞî…ıÿÿÿÿ8º§³å©1
+H	java:S106Ø"+Replace this use of System.out by a logger.(Œı’è8šşçå©1
+H	java:S106•"+Replace this use of System.out by a logger.(Œı’è8°õæ©1
+[
+java:S1128">Remove this unused import 'com.poscodx.mysite.vo.GuestBookVo'.(¤ßüÕ8Àæ©1

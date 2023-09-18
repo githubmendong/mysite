@@ -1,0 +1,25 @@
+
+_
+java:S2259'"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8Ó§Óš¨1
+`
+java:S2259ª"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8¿°áµ¨1
+_
+java:S2259w"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8­éµ›§1
+_
+java:S2259 "BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8Ó§Óš¨1
+_
+java:S2259M"BA "NullPointerException" could be thrown; "conn" is nullable here.(Ä×Óù8é™…“§1
+l
+java:S2095w"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ä×Óù8­éµ›§1
+m
+java:S2095ª"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ä×Óù8À°áµ¨1
+]	java:S125"<This block of commented-out lines of code should be removed.(¿Ðàüÿÿÿÿ8åœ’§1
+]	java:S125"<This block of commented-out lines of code should be removed.(ßÅîÿþÿÿÿÿ8¸Ù¢ó©1
+S
+java:S6437"6Revoke and change this password, as it is compromised.(ùà³„8‚åœ’§1
+G	java:S1061"+Replace this use of System.out by a logger.(Œý’è8²¨ª’§1
+L	java:S106Y"+Replace this use of System.out by a logger.(¶‰¼‚ýÿÿÿÿ8¸éµ›§1
+H	java:S106†"+Replace this use of System.out by a logger.(Œý’è8è§Óš¨1
+M	java:S106»"+Replace this use of System.out by a logger.(¶‰¼‚ýÿÿÿÿ8å°áµ¨1
+[
+java:S1128">Remove this unused import 'com.poscodx.mysite.vo.GuestBookVo'.(¤ßüÕ8ï™…“§1

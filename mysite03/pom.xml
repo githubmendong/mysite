@@ -56,12 +56,28 @@
     </dependencies>
 
 
+
+
     <build>
-    <plugins>
-<plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>3.3.2</version>
-      </plugin>    </plugins>
-  </build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
+                <configuration>
+                    <!--                    JSP 파일이 위치한 디렉터리 설정-->
+                    <webResources>
+                        <resource>
+                            <directory>src/main/webapp</directory>
+                            <includes>
+                                <include>WEB-INF/views/index.jsp</include>
+                            </includes>
+                        </resource>
+                    </webResources>
+                </configuration>
+            </plugin>
+        </plugins>
+        <finalName>mysite03</finalName>
+
+    </build>
 </project>

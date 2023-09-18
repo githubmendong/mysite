@@ -2,6 +2,7 @@ package com.poscodx.mysite.vo;
 
 public class UserVo {
     private Long no;
+
     private String name;
     private String email;
     private String password;
@@ -48,5 +49,4 @@ public class UserVo {
         return "UserVo [no=" + no + ", name=" + name + ", email=" + email + ", password=" + password + ", gender="
                 + gender + ", joinDate=" + joinDate + "]";
     }
-
 }
