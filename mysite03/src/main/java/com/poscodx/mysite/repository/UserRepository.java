@@ -1,19 +1,15 @@
 package com.poscodx.mysite.repository;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import com.poscodx.mysite.vo.GuestbookVo;
+import org.springframework.stereotype.Repository;
+
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
-
-import com.poscodx.mysite.vo.GuestbookVo;
-
 @Repository
-public class GuestbookRepository {
+
+public class UserRepository {
 	public Boolean deleteByNoAndPassword(Long no, String password) {
 		boolean result = false;
 		
