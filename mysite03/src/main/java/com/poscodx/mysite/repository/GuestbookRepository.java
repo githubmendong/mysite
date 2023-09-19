@@ -12,24 +12,24 @@ import com.poscodx.mysite.vo.GuestbookVo;
 
 @Repository
 public class GuestbookRepository {
-    @Autowired
-    private SqlSession sqlSession;
-
-    public Boolean deleteByNoAndPassword(Long no, String password) {
-        Map<String, Object> map = new HashMap<>();
-        map.put("no", no);
-        map.put("password", password);
-
-        int count = sqlSession.delete("guestbook.deleteByNoAndPassword", map);
-        return count == 1;
-    }
-
-    public Boolean insert(GuestbookVo vo) {
-        int count = sqlSession.insert("guestbook.insert", vo);
-        return count == 1;
-    }
-
-    public List<GuestbookVo> findAll() {
-        return sqlSession.selectList("guestbook.findAll");
-    }
+	@Autowired
+	private SqlSession sqlSession;
+	
+	public Boolean deleteByNoAndPassword(Long no, String password) {
+		Map<String, Object> map = new HashMap<>();
+		map.put("no", no);
+		map.put("password", password);
+		
+		int count = sqlSession.delete("guestbook.deleteByNoAndPassword", map);
+		return count == 1;
+	}
+	
+	public Boolean insert(GuestbookVo vo) {
+		int count = sqlSession.insert("guestbook.insert", vo);
+		return count == 1;
+	}
+	
+	public List<GuestbookVo> findAll() {
+		return sqlSession.selectList("guestbook.findAll");
+	}
 }

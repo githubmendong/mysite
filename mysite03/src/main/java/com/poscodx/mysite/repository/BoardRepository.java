@@ -1,63 +1,71 @@
 package com.poscodx.mysite.repository;
 
-import com.poscodx.mysite.vo.BoardVo;
-import com.poscodx.mysite.vo.GuestbookVo;
-import com.poscodx.mysite.vo.UserVo;
-import org.apache.ibatis.session.SqlSession;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-import javax.sql.DataSource;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.poscodx.mysite.vo.BoardVo;
+
 @Repository
 public class BoardRepository {
-
 
     @Autowired
     private SqlSession sqlSession;
 
-    public List<BoardVo> findAll() {
-        return sqlSession.selectList("guestbook.findAll");
+    public int insert(BoardVo boardVo) {
+        return sqlSession.insert("board.insert", boardVo);
     }
 
+    public List<BoardVo> findAllByPageAndKeword(String keyword, Integer page, Integer size) {
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("keyword", keyword);
+        map.put("startIndex", (page - 1) * size);
+        map.put("size", size);
 
-
-
-    public static int getIntParameter(HttpServletRequest request, String paramName) {
-        String paramValue = request.getParameter(paramName);
-        try {
-            return Integer.parseInt(paramValue);
-        } catch (NumberFormatException e) {
-            return 0;
-        }
+        return sqlSession.selectList("board.findAllByPageAndKeword", map);
     }
 
-    public static void handleSameDepthCase(int gNo, int depth) {
-        System.out.println("Handling the case of same depth");
+    public int update(BoardVo boardVo) {
+        return sqlSession.update("board.update", boardVo);
     }
 
-    public static boolean hasSameOrPlus1Depth(int gNo, int depth) {
-        int countSameDepth = BoardDao.findHasSameDepth(gNo, depth);
-        int countPlus1Depth = BoardDao.findHasPlus1Depth(gNo, depth);
-        return countSameDepth != 0 || (countPlus1Depth != 0 && countSameDepth == 0);
+    public int delete(Long no, Long userNo) {
+        Map<String, Long> map = new HashMap<String, Long>();
+        map.put("no", no);
+        map.put("userNo", userNo);
+
+        return sqlSession.delete("board.delete", map);
     }
 
-    public static boolean userHasPermission(HttpSession session, BoardVo boardVo) {
-        UserVo authUser = (UserVo) session.getAttribute("authUser");
-
-        if (authUser == null) {
-            return false;
-        }
-
-        Long loggedInUserNo = authUser.getNo();
-        Long boardWriterNo = boardVo.getUserNo();
-
-        return loggedInUserNo.equals(boardWriterNo);
+    public BoardVo findByNo(Long no) {
+        return sqlSession.selectOne("board.findByNo", no);
     }
 
+    public BoardVo findByNoAndUserNo(Long no, Long userNo) {
+        Map<String, Long> map = new HashMap<String, Long>();
+        map.put("no", no);
+        map.put("userNo", userNo);
+
+        return sqlSession.selectOne("board.findByNoAndUserNo", map);
+    }
+
+    public int updateHit(Long no) {
+        return sqlSession.update("board.updateHit", no);
+    }
+
+    public int updateOrderNo(Integer groupNo, Integer orderNo) {
+        Map<String, Integer> map = new HashMap<String, Integer>();
+        map.put("groupNo", groupNo);
+        map.put("orderNo", orderNo);
+
+        return sqlSession.update("board.updateOrederNo", map);
+    }
+
+    public int getTotalCount(String keyword) {
+        return sqlSession.selectOne("board.totalCount", keyword);
+    }
 }

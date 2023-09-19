@@ -1,19 +1,22 @@
 
 k
-java:S11928"IDefine a constant instead of duplicating this literal "authUser" 4 times.(Ø­„æýÿÿÿÿ8­êÚ·ª1
+java:S11929"IDefine a constant instead of duplicating this literal "authUser" 4 times.(Ø­„æýÿÿÿÿ8­êÚ·ª1
 e
-java:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¸–·Ž8Æ®¼®ª1
+java:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¸–·Ž8Æ®¼®ª1
 l
-java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(È·÷»ýÿÿÿÿ8È®¼®ª1
+java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(È·÷»ýÿÿÿÿ8È®¼®ª1
 j
-java:S4488 "HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(š´Íïüÿÿÿÿ8É®¼®ª1
+java:S4488!"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(š´Íïüÿÿÿÿ8É®¼®ª1
 e
-java:S4488%"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Ú­Ç†8Ê®¼®ª1
+java:S4488&"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Ú­Ç†8Ê®¼®ª1
 l
-java:S4488*"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(£ÀÂûýÿÿÿÿ8ÍêÚ·ª1
+java:S4488+"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(£ÀÂûýÿÿÿÿ8ÍêÚ·ª1
 ^
-java:S24418"<Make "UserVo" serializable or don't store it in the session.(Ø­„æýÿÿÿÿ8ÑêÚ·ª1
+java:S24419"<Make "UserVo" serializable or don't store it in the session.(Ø­„æýÿÿÿÿ8ÑêÚ·ª1
 e
-java:S4488E"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Û†¾£8ÕêÚ·ª1
+java:S4488F"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Û†¾£8ÕêÚ·ª1
 f
-java:S4488T"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ï˜¦8ÙêÚ·ª1
+java:S4488U"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ï˜¦8ÙêÚ·ª1
+]	java:S125d"<This block of commented-out lines of code should be removed.(—±ïëþÿÿÿÿ8Å¡¯ßª1
+r
+java:S1128"URemove this unused import 'org.springframework.web.bind.annotation.ExceptionHandler'.(–Œ•¬8Å¡¯ßª1
