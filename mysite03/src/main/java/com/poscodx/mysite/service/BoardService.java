@@ -16,11 +16,11 @@ public class BoardService {
 		return boardRepository.findAll();
 	}
 	
-	public Boolean deleteContents(Long no, String password) {
+	public Boolean boarddeletes(Long no, String password) {
 		return boardRepository.deleteByNoAndPassword(no, password);
 	}
 	
-	public Boolean addContents(BoardVo vo) {
+	public Boolean boardWrite(BoardVo vo) {
 		return boardRepository.insert(vo);
 	}
 }
