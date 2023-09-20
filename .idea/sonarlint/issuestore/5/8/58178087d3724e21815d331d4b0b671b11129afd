@@ -1,20 +1,14 @@
 
-k
-java:S11928"IDefine a constant instead of duplicating this literal "authUser" 4 times.(Ø­„æıÿÿÿÿ8­êÚ·ª1
 e
-java:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¸–·8Æ®¼®ª1
+java:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¸–·8–úÏ«1
 l
-java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(È·÷»ıÿÿÿÿ8È®¼®ª1
+java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(È·÷»ıÿÿÿÿ8œúÏ«1
 j
-java:S4488 "HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(š´Íïüÿÿÿÿ8É®¼®ª1
+java:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(š´Íïüÿÿÿÿ8ŸúÏ«1
 e
-java:S4488%"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Ú­Ç†8Ê®¼®ª1
-l
-java:S4488*"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(£ÀÂûıÿÿÿÿ8ÍêÚ·ª1
-^
-java:S24418"<Make "UserVo" serializable or don't store it in the session.(Ø­„æıÿÿÿÿ8ÑêÚ·ª1
+java:S4488$"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Ú­Ç†8ŸúÏ«1
 e
-java:S4488E"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Û†¾£8ÕêÚ·ª1
+java:S4488*"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Û†¾£8 úÏ«1
 f
-java:S4488T"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ï˜¦8ÙêÚ·ª1
-X	java:S125d"<This block of commented-out lines of code should be removed.(Ø—°ù8Å¡¯ßª1
+java:S44882"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ï˜¦8«úÏ«1
+X	java:S125<"<This block of commented-out lines of code should be removed.(Ø—°ù8­úÏ«1

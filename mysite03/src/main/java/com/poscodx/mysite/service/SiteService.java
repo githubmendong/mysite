@@ -16,6 +16,7 @@ public class SiteService {
 		return null;
 	}
 
-	public void UpdateSite(SiteVo vo) {
+	public boolean update(SiteVo siteVo) {
+		return SiteRepository.update(siteVo);
 	}
 }

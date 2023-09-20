@@ -1,18 +1,14 @@
 
 h
-java:S1192="FDefine a constant instead of duplicating this literal "&kwd=" 3 times.(´ğî¡ùÿÿÿÿ8†Û·ãª1
+java:S11929"FDefine a constant instead of duplicating this literal "&kwd=" 3 times.(´ğî¡ùÿÿÿÿ8ùßÏ«1
 h
-java:S1192="FDefine a constant instead of duplicating this literal "UTF-8" 3 times.(´ğî¡ùÿÿÿÿ8Û·ãª1
+java:S11929"FDefine a constant instead of duplicating this literal "UTF-8" 3 times.(´ğî¡ùÿÿÿÿ8ùßÏ«1
 e
-java:S1192,"HDefine a constant instead of duplicating this literal "boardVo" 3 times.(ì’“8–Û·ãª1
-w
-java:S11929"UDefine a constant instead of duplicating this literal "redirect:/user/login" 6 times.(ÈÕŞöüÿÿÿÿ8›Û·ãª1
-f
-java:S11927"IDefine a constant instead of duplicating this literal "authUser" 6 times.(’±±‡8œÛ·ãª1
-X	java:S125""<This block of commented-out lines of code should be removed.(Ëé—8¹Û·ãª1
+java:S1192-"HDefine a constant instead of duplicating this literal "boardVo" 3 times.(ì’“8ùßÏ«1
+X	java:S125#"<This block of commented-out lines of code should be removed.(Ëé—8‹àÏ«1
 g
-java:S4488O"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(œË¿‘8ÂÛ·ãª1
+java:S4488E"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(œË¿‘8àÏ«1
 j
-java:S4488c"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(áƒ¦Òøÿÿÿÿ8ÆÛ·ãª1
+java:S4488S"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(áƒ¦Òøÿÿÿÿ8“àÏ«1
 l
-java:S4488o"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(¦Å›Áşÿÿÿÿ8ÈÛ·ãª1
+java:S4488Y"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(¦Å›Áşÿÿÿÿ8—àÏ«1
