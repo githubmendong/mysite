@@ -2,7 +2,6 @@ package com.poscodx.mysite.controller;
 
 import java.util.List;
 
-import com.poscodx.mysite.security.Auth;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.poscodx.mysite.security.Auth;
 import com.poscodx.mysite.service.GuestbookService;
 import com.poscodx.mysite.vo.GuestbookVo;
 
@@ -45,5 +45,5 @@ public class GuestbookController {
 		guestbookService.addContents(vo);
 		return "redirect:/guestbook";
 	}
-	
+
 }
