@@ -1,5 +1,9 @@
 
-W
-java:S1172("5Remove these unused method parameters "gNo", "depth".(ˆ–­Şøÿÿÿÿ8Ññ·¸ª1
-L	java:S106)"+Replace this use of System.out by a logger.(Ï€°Ûıÿÿÿÿ8Òñ·¸ª1
-]	java:S125,"<This block of commented-out lines of code should be removed.(½›ö­şÿÿÿÿ8×—ÇÛª1
+{
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ºöºıÿÿÿÿ8‡ŠÊãª1
+v
+java:S2293%"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÔÜÀ8ˆŠÊãª1
+v
+java:S22931"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÔÜÀ8ˆŠÊãª1
+u
+java:S2293="YReplace the type specification in this constructor call with the diamond operator ("<>").(’Šü8ˆŠÊãª1

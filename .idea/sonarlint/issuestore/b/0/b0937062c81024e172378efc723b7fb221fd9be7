@@ -1,3 +1,5 @@
 
-X	java:S125"<This block of commented-out lines of code should be removed.(ç§©Ê8ÇÊÈÛª1
-]	java:S125"<This block of commented-out lines of code should be removed.(ËÚ­—úÿÿÿÿ8´´ÈÛª1
+{
+java:S2293Q"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ºöºıÿÿÿÿ8—…Êãª1
+
+java:S1488("_Immediately return this expression instead of assigning it to the temporary variable "boardVo".(°Ùá ùÿÿÿÿ8š…Êãª1

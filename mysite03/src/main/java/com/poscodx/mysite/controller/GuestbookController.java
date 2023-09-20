@@ -2,6 +2,7 @@ package com.poscodx.mysite.controller;
 
 import java.util.List;
 
+import com.poscodx.mysite.security.Auth;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,7 +19,8 @@ import com.poscodx.mysite.vo.GuestbookVo;
 public class GuestbookController {
 	@Autowired
 	private GuestbookService guestbookService;
-	
+
+	@Auth
 	@RequestMapping("")
 	public String main(Model model) {
 		List<GuestbookVo> list = guestbookService.getContentsList();
