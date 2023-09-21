@@ -18,7 +18,7 @@ import com.poscodx.mysite.vo.GuestbookVo;
 public class GuestbookController {
 	@Autowired
 	private GuestbookService guestbookService;
-
+	
 	@RequestMapping("")
 	public String main(Model model) {
 		List<GuestbookVo> list = guestbookService.getContentsList();
@@ -43,5 +43,5 @@ public class GuestbookController {
 		guestbookService.addContents(vo);
 		return "redirect:/guestbook";
 	}
-
+	
 }

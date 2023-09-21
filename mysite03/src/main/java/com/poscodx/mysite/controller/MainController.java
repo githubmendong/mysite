@@ -9,11 +9,11 @@ import com.poscodx.mysite.service.SiteService;
 @Controller
 public class MainController {
 	@Autowired
-	private SiteService siteService;
-
+	private SiteService siteService;	
+	
 	@RequestMapping("/")
 	public String index() {
 		return "main/index";
 	}
-
+	
 }

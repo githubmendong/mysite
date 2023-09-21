@@ -8,15 +8,18 @@ import com.poscodx.mysite.vo.SiteVo;
 
 @Service
 public class SiteService {
-
+	
 	@Autowired
 	private SiteRepository repository;
+	
+	@Autowired
+	private SiteRepository sietRepository;
 
 	public SiteVo getSite() {
-		return null;
+		return sietRepository.find();
 	}
-
-	public boolean update(SiteVo siteVo) {
-		return SiteRepository.update(siteVo);
+	
+	public void updateSite(SiteVo vo) {
+		sietRepository.update(vo);
 	}
 }

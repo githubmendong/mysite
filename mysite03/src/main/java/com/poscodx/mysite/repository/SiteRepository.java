@@ -9,14 +9,13 @@ import com.poscodx.mysite.vo.SiteVo;
 @Repository
 public class SiteRepository {
 	@Autowired
-	private static SqlSession sqlSession;
+	private SqlSession sqlSession;
 
 	public SiteVo find() {
 		return sqlSession.selectOne("site.find");
 	}
 
-	public static boolean update(SiteVo vo) {
-		int count = sqlSession.update("site.update", vo);
-		return count == 1;
+	public void update(SiteVo vo) {
+		sqlSession.update("site.update", vo);
 	}
 }

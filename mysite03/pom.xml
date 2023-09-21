@@ -25,24 +25,11 @@
 			<version>${org-springframework-version}</version>
 			<!-- JCL 제외 -->
 			<exclusions>
-				<exclusion>
-					<groupId>org.springframework</groupId>
-					<artifactId>spring-jcl</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-
-
-		<!-- Logback -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jcl-over-slf4j</artifactId>
-			<version>${jcloverslf4j.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>${logback.version}</version>
+			   <exclusion>
+				  <groupId>org.springframework</groupId>
+				  <artifactId>spring-jcl</artifactId>
+			   </exclusion>
+			</exclusions>			
 		</dependency>
 
 		<!-- spring aspect -->
@@ -92,6 +79,18 @@
 		    <version>3.0.8</version>
 		</dependency>
 		
+		<!-- logback --> 
+		<dependency>                                    
+			<groupId>org.slf4j</groupId>                
+			<artifactId>jcl-over-slf4j</artifactId>     
+			<version>${jcloverslf4j.version}</version>  
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+				
 		<!-- servlet -->
 		<dependency>
 		    <groupId>javax.servlet</groupId>
