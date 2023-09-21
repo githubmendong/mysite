@@ -8,7 +8,7 @@
 		<choose>
 			<when test='password == ""'>
 				<![CDATA[
-				update user set name=#{name }, gender=#{gender } where no=#{no }
+				update user set title=#{title}, welcome=#{welcome } profile=#{} where no=#{no }
 				]]>
 			</when>
 			<otherwise>
