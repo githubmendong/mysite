@@ -22,7 +22,7 @@ public class UserController {
 	private UserService userService;
 
 	@RequestMapping(value="/join", method=RequestMethod.GET)
-	public String join() {
+	public String join(@ModelAttribute UserVo userVo) {
 		return "user/join";
 	}
 
@@ -33,11 +33,11 @@ public class UserController {
 			// for(ObjectError error : list) {
 			//	System.out.println(error);
 			// }
-
+			
 			model.addAllAttributes(result.getModel());
 			return "user/join";
 		}
-
+		
 		userService.join(userVo);
 		return "redirect:/user/joinsuccess";
 	}
@@ -51,21 +51,21 @@ public class UserController {
 	public String login() {
 		return "user/login";
 	}
-
+	
 	@Auth
 	@RequestMapping(value="/update", method=RequestMethod.GET)
-	public String update(@AuthUser UserVo authUser, Model model) {
+	public String update(@AuthUser UserVo authUser, Model model) {		
 		UserVo userVo = userService.getUser(authUser.getNo());
 		model.addAttribute("userVo", userVo);
 		return "user/update";
 	}
-
+	
 	@Auth
 	@RequestMapping(value="/update", method=RequestMethod.POST)
 	public String update(@AuthUser UserVo authUser, UserVo userVo) {
 		userVo.setNo(authUser.getNo());
 		userService.update(userVo);
-
+		
 		authUser.setName(userVo.getName());
 		return "redirect:/user/update";
 	}
