@@ -2,38 +2,24 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<groupId>com.poscodx</groupId>
 	<artifactId>mysite03</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<name>mysite03</name>
 	<packaging>war</packaging>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.build.outputEncoding>UTF-8</project.build.outputEncoding>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 		<org-springframework-version>5.3.25</org-springframework-version>
-		<jcloverslf4j.version>1.7.36</jcloverslf4j.version>
-		<logback.version>1.2.11</logback.version>
+    	<jcloverslf4j.version>1.7.36</jcloverslf4j.version>		
+    	<logback.version>1.2.11</logback.version>
 	</properties>
 
 	<dependencies>
-
-
-<!--		<dependency>-->
-		<!--			<groupId>javax.validation</groupId>-->
-		<!--			<artifactId>validation-api</artifactId>-->
-		<!--			<version>2.0.1.Final</version>-->
-		<!--		</dependency>-->
-
-		<!-- validation -->
-		<dependency>
-			<groupId>org.hibernate.validator</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>6.2.3.Final</version>
-		</dependency>
-
-
 		<!-- spring mvc -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -60,6 +46,13 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 			<version>${org-springframework-version}</version>
+		</dependency>
+
+		<!-- validation -->
+		<dependency>
+		   <groupId>org.hibernate.validator</groupId>
+		   <artifactId>hibernate-validator</artifactId>
+		   <version>6.2.3.Final</version>
 		</dependency>
 
 		<!-- jstl -->
@@ -95,6 +88,18 @@
 		    <version>3.0.8</version>
 		</dependency>
 		
+		<!-- file upload -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.4</version>
+		</dependency>
+				
 		<!-- logback --> 
 		<dependency>                                    
 			<groupId>org.slf4j</groupId>                
@@ -119,7 +124,7 @@
 		    <artifactId>jsp-api</artifactId>
 		    <version>2.2</version>
 		    <scope>provided</scope>
-		</dependency>
+		</dependency>		
 	</dependencies>
 
 	<build>
