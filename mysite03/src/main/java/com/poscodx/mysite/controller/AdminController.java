@@ -22,8 +22,8 @@ public class AdminController {
 	@Autowired
 	private ApplicationContext applicationContext;
 	
-	@Autowired
-	private ServletContext servletContext;
+//	@Autowired
+//	private ServletContext servletContext;
 	
 	@Autowired
 	private SiteService siteService;
