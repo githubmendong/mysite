@@ -1,3 +1,2 @@
 
-^
-java:S2441""<Make "UserVo" serializable or don't store it in the session.(Ø­„æıÿÿÿÿ8ìÃ÷«1
+G	java:S106""+Replace this use of System.out by a logger.(×¶Û´8×¥à½«1
