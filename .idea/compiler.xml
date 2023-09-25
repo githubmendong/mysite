@@ -8,8 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mysite02" />
-        <module name="mysite03" />
+        <module name="mysite03 (1) (com.poscodx)" />
+        <module name="mysite03 (2) (com.bitacademy)" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mysite03" target="12" />
+    </bytecodeTargetLevel>
   </component>
 </project>
