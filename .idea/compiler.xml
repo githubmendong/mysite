@@ -7,16 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="jblog03" />
+        <module name="mysite02" />
+        <module name="mysite03" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="mysite" target="17" />
-      <module name="mysite02" target="1.8" />
-      <module name="mysite03" target="17" />
-      <module name="mysite03 (1)" target="17" />
       <module name="mysite03 (1) (com.poscodx)" target="17" />
-      <module name="mysite03 (2)" target="17" />
       <module name="mysite03 (2) (com.bitacademy)" target="12" />
     </bytecodeTargetLevel>
   </component>

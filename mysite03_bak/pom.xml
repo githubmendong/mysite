@@ -5,7 +5,7 @@
 	<groupId>com.poscodx</groupId>
 	<artifactId>mysite03</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<name>mysite03_bak</name>
+	<name>mysite03</name>
 	<packaging>war</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -87,6 +87,6 @@
 	</dependencies>
 
 	<build>
-		<finalName>mysite03_bak</finalName>
+		<finalName>mysite03</finalName>
 	</build>	
 </project>
