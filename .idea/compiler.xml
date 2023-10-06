@@ -8,7 +8,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mysite02" />
+        <module name="mysite04" />
         <module name="mysite03" />
+        <module name="mysite05" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,8 +18,6 @@
       <module name="jblog03" target="17" />
       <module name="mysite03 (1) (com.poscodx)" target="17" />
       <module name="mysite03 (2) (com.bitacademy)" target="12" />
-      <module name="mysite04" target="17" />
-      <module name="mysite05" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
