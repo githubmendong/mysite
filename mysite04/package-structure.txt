@@ -13,10 +13,10 @@
  |     |     |     |    |-- SecurityConfig.java
  |     |     |     |    |-- MessageSourceConfig.java
  |     |     |     |    |-- FileuploadConfig.java
- |     |     |-- /controller
+ |     |     |-- /controller 
  |     |     |-- /service
  |     |     |-- /repository
-
+  
 
 [src/main/resources]
 /com
@@ -24,16 +24,17 @@
  |     |-- /mysite
  |     |     |-- /config
  |     |     |     |-- /app
- |     |     |     |    |-- jdbc.properties
+ |     |     |     |    |-- jdbc.properties 
  |     |     |     |    |-- /mybatis
  |     |     |     |    |     |-- configuration.xml
  |     |     |     |    |     |-- /mappers
  |     |     |     |    |     |     |-- board.xml
  |     |     |     |    |     |     |-- user.xml
  |     |     |     |-- /web
+ |     |     |     |    |-- fileupload.properties
  |     |     |     |    |-- /messages
- |     |     |     |    |     |-- messages_ko.properties
-
- com.poscodx.mysite.config.web.messages
-
-
+ |     |     |     |    |     |-- messages_ko.properties 
+ 
+ 
+ 
+  
