@@ -1,16 +1,17 @@
 package poscodx.mysite.controller;
 
-import com.poscodx.mysite.service.SiteService;
-import com.poscodx.mysite.vo.SiteVo;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import poscodx.mysite.service.SiteService;
+import poscodx.mysite.vo.SiteVo;
 
 @Controller
 public class MainController {
 	@Autowired
-	private SiteService siteService;	
+	private SiteService siteService;
 	
 	@RequestMapping("/")
 	public String index(Model model) {

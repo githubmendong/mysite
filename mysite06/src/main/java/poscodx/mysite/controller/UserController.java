@@ -1,9 +1,6 @@
 package poscodx.mysite.controller;
 
-import com.poscodx.mysite.security.Auth;
-import com.poscodx.mysite.security.AuthUser;
-import com.poscodx.mysite.service.UserService;
-import com.poscodx.mysite.vo.UserVo;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +8,10 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import poscodx.mysite.security.Auth;
+import poscodx.mysite.security.AuthUser;
+import poscodx.mysite.service.UserService;
+import poscodx.mysite.vo.UserVo;
 
 import javax.validation.Valid;
 
@@ -53,7 +54,7 @@ public class UserController {
 	
 	@Auth
 	@RequestMapping(value="/update", method=RequestMethod.GET)
-	public String update(@AuthUser UserVo authUser, Model model) {		
+	public String update(@AuthUser UserVo authUser, Model model) {
 		UserVo userVo = userService.getUser(authUser.getNo());
 		model.addAttribute("userVo", userVo);
 		return "user/update";

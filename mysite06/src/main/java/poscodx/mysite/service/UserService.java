@@ -1,9 +1,11 @@
 package poscodx.mysite.service;
 
-import com.poscodx.mysite.repository.UserRepository;
-import com.poscodx.mysite.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import poscodx.mysite.repository.UserRepository;
+import poscodx.mysite.vo.UserVo;
+
+import javax.validation.Valid;
 
 @Service
 public class UserService {
@@ -13,7 +15,7 @@ public class UserService {
 	@Autowired
 	private UserRepository userRepository;
 
-	public void join(UserVo vo) {
+	public void join(@Valid UserVo vo) {
 		System.out.println(vo);
 		
 		userRepository.insert(vo);

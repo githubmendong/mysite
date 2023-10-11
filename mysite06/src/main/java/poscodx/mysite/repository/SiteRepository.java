@@ -1,9 +1,9 @@
 package poscodx.mysite.repository;
 
-import com.poscodx.mysite.vo.SiteVo;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import poscodx.mysite.vo.SiteVo;
 
 @Repository
 public class SiteRepository {

@@ -1,9 +1,9 @@
 package poscodx.mysite.repository;
 
-import com.poscodx.mysite.vo.BoardVo;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import poscodx.mysite.vo.BoardVo;
 
 import java.util.HashMap;
 import java.util.List;

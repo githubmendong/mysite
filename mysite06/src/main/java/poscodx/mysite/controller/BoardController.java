@@ -1,15 +1,16 @@
 package poscodx.mysite.controller;
 
-import com.poscodx.mysite.security.Auth;
-import com.poscodx.mysite.security.AuthUser;
-import com.poscodx.mysite.service.BoardService;
-import com.poscodx.mysite.vo.BoardVo;
-import com.poscodx.mysite.vo.UserVo;
-import com.poscodx.web.util.WebUtil;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import poscodx.mysite.security.Auth;
+import poscodx.mysite.security.AuthUser;
+import poscodx.mysite.service.BoardService;
+import poscodx.mysite.vo.BoardVo;
+import poscodx.mysite.vo.UserVo;
+import poscodx.web.util.WebUtil;
 
 import java.util.Map;
 
@@ -44,7 +45,7 @@ public class BoardController {
 	@Auth
 	@RequestMapping("/delete/{no}")
 	public String delete(
-		@AuthUser UserVo authUser, 
+		@AuthUser UserVo authUser,
 		@PathVariable("no") Long boardNo,
 		@RequestParam(value="p", required=true, defaultValue="1") Integer page,
 		@RequestParam(value="kwd", required=true, defaultValue="") String keyword) {		

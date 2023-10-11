@@ -1,9 +1,9 @@
 package poscodx.mysite.service;
 
-import com.poscodx.mysite.repository.BoardRepository;
-import com.poscodx.mysite.vo.BoardVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import poscodx.mysite.repository.BoardRepository;
+import poscodx.mysite.vo.BoardVo;
 
 import java.util.HashMap;
 import java.util.List;

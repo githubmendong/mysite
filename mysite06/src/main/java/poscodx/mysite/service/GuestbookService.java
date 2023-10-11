@@ -1,9 +1,9 @@
 package poscodx.mysite.service;
 
-import com.poscodx.mysite.repository.GuestbookRepository;
-import com.poscodx.mysite.vo.GuestbookVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import poscodx.mysite.repository.GuestbookRepository;
+import poscodx.mysite.vo.GuestbookVo;
 
 import java.util.List;
 

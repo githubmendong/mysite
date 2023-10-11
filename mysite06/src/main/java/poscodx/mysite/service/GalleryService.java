@@ -1,7 +1,7 @@
 package poscodx.mysite.service;
 
-import com.poscodx.mysite.vo.GalleryVo;
 import org.springframework.stereotype.Service;
+import poscodx.mysite.vo.GalleryVo;
 
 import java.util.List;
 
