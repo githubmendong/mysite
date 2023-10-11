@@ -5,7 +5,7 @@
 	<groupId>com.poscodx</groupId>
 	<artifactId>mysite05</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<name>mysite05</name>
+<!--	<name>mysite05</name>-->
 	<packaging>war</packaging>
 
 	<properties>
