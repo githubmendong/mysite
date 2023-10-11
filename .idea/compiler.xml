@@ -22,4 +22,9 @@
       <module name="mysite03 (2) (com.bitacademy)" target="12" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mysite06" options="-parameters" />
+    </option>
+  </component>
 </project>
