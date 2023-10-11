@@ -12,22 +12,22 @@ import org.springframework.web.servlet.NoHandlerFoundException;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
-	private static final Log logger = LogFactory.getLog(GlobalExceptionHandler.class);
+	private static final Log logger = LogFactory.getLog(GlobalExceptionHandler.class); 
 	
 	@ExceptionHandler(Exception.class)
 	public String handlerException(Model model, Exception e) {
-	
-		//1. 404 Error 처리
+		// 1. 404 Error 처리 
 		if(e instanceof NoHandlerFoundException) {
 			return "error/404";
 		}
 		
-		//2. 로깅(Logging)
+		// 2. 로깅(Logging)
 		StringWriter errors = new StringWriter();
 		e.printStackTrace(new PrintWriter(errors));
+		// System.out.println(errors.toString());
 		logger.error(errors.toString());
 		
-		//3. 사과 페이지
+		// 3. 사과 페이지
 		model.addAttribute("errors", errors.toString());
 		return "error/exception";
 	}

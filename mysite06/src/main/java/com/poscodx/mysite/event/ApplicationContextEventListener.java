@@ -16,10 +16,10 @@ public class ApplicationContextEventListener {
 	@Autowired
 	private ApplicationContext applicationContext;
 	
+	
 	@EventListener({ContextRefreshedEvent.class})
 	public void handlerContextRefreshedEvent() {
-		System.out.println("--- Context Refreshed Event Received : ---" + applicationContext);
-		
+		System.out.println("---- Context Refreshed Event Received : ----");
 		SiteService siteService = applicationContext.getBean(SiteService.class);
 		SiteVo site = siteService.getSite();
 		
@@ -28,15 +28,14 @@ public class ApplicationContextEventListener {
 		propertyValues.add("profile", site.getProfile());
 		propertyValues.add("welcome", site.getWelcome());
 		propertyValues.add("description", site.getDescription());
-		
+
 		GenericBeanDefinition beanDefinition = new GenericBeanDefinition();
 		beanDefinition.setBeanClass(SiteVo.class);
 		beanDefinition.setPropertyValues(propertyValues);
-		
+
 		AutowireCapableBeanFactory factory = applicationContext.getAutowireCapableBeanFactory();
 		BeanDefinitionRegistry registry = (BeanDefinitionRegistry)factory;
 		
-		registry.registerBeanDefinition("site", beanDefinition);		
+		registry.registerBeanDefinition("site", beanDefinition);	
 	}
-	
 }

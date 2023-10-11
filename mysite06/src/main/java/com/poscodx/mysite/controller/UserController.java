@@ -69,18 +69,24 @@ public class UserController {
 		authUser.setName(userVo.getName());
 		return "redirect:/user/update";
 	}
-
+	
 	@RequestMapping("/auth")
 	public void auth() {
-	}
-
-	@RequestMapping("/logout")
-	public void logout() {
+		
 	}
 	
+	@RequestMapping("/logout")
+	public void logout() {
+		
+	}
 	
 //	@ExceptionHandler(Exception.class)
 //	public String handlerException() {
 //		return "error/exception";
+//	}
+	
+//	@RequestMapping(value="/noSession", method=RequestMethod.GET)
+//	public String noSession() {
+//		return "user/noSession";
 //	}
 }

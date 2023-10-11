@@ -52,7 +52,7 @@
 					<fieldset>
 						<legend>성별</legend>
 						<form:radiobutton path="gender" value="female" label="여" checked="checked" />
-						<form:radiobutton path="gender" value="male" label="남" checked="checked" />
+						<form:radiobutton path="gender" value="male" label="남" />
 					</fieldset>
 					
 					<fieldset>

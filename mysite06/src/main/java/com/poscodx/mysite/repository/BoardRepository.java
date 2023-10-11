@@ -12,15 +12,14 @@ import com.poscodx.mysite.vo.BoardVo;
 
 @Repository
 public class BoardRepository {
-
-    @Autowired
-    private SqlSession sqlSession;
-
-    public int insert(BoardVo boardVo) {
-        return sqlSession.insert("board.insert", boardVo);
-    }
-
-    public List<BoardVo> findAllByPageAndKeword(String keyword, Integer page, Integer size) {
+	@Autowired
+	private SqlSession sqlSession;
+	
+	public int getTotalCount(String keyword) {
+		return sqlSession.selectOne("board.totalCount", keyword);
+	}
+	
+	public List<BoardVo> findAllByPageAndKeword(String keyword, Integer page, Integer size) {
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("keyword", keyword);
         map.put("startIndex", (page - 1) * size);
@@ -29,11 +28,15 @@ public class BoardRepository {
         return sqlSession.selectList("board.findAllByPageAndKeword", map);
     }
 
-    public int update(BoardVo boardVo) {
-        return sqlSession.update("board.update", boardVo);
-    }
+	public BoardVo findByNo(Long no) {
+		return sqlSession.selectOne("board.findByNo", no);
+	}
+	
+	public int updateHit(Long no) {
+		return sqlSession.update("board.updateHit", no);
+	}
 
-    public int delete(Long no, Long userNo) {
+	 public int delete(Long no, Long userNo) {
         Map<String, Long> map = new HashMap<String, Long>();
         map.put("no", no);
         map.put("userNo", userNo);
@@ -41,31 +44,27 @@ public class BoardRepository {
         return sqlSession.delete("board.delete", map);
     }
 
-    public BoardVo findByNo(Long no) {
-        return sqlSession.selectOne("board.findByNo", no);
-    }
-
-    public BoardVo findByNoAndUserNo(Long no, Long userNo) {
-        Map<String, Long> map = new HashMap<String, Long>();
+	public BoardVo findByNoAndUserNo(Long no, Long userNo) {
+		Map<String, Long> map = new HashMap<String, Long>();
         map.put("no", no);
         map.put("userNo", userNo);
 
         return sqlSession.selectOne("board.findByNoAndUserNo", map);
-    }
+	}
 
-    public int updateHit(Long no) {
-        return sqlSession.update("board.updateHit", no);
-    }
+	public int update(BoardVo boardVo) {
+		return sqlSession.update("board.update", boardVo);
+	}
 
-    public int updateOrderNo(Integer groupNo, Integer orderNo) {
-        Map<String, Integer> map = new HashMap<String, Integer>();
+	public int updateOrderNo(Integer groupNo, Integer orderNo) {
+		Map<String, Integer> map = new HashMap<String, Integer>();
         map.put("groupNo", groupNo);
         map.put("orderNo", orderNo);
 
         return sqlSession.update("board.updateOrederNo", map);
-    }
+	}
 
-    public int getTotalCount(String keyword) {
-        return sqlSession.selectOne("board.totalCount", keyword);
-    }
+	public int insert(BoardVo boardVo) {
+		return sqlSession.insert("board.insert", boardVo);
+	}
 }

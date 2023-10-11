@@ -10,8 +10,8 @@
 </head>
 <body>
 	<h1>Exception Thrown</h1>
-	<pre style="color: red">
-	${errors }	
+	<pre>
+		${errors }
 	</pre>
 </body>
 </html>
