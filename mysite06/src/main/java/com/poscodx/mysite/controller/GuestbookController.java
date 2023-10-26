@@ -1,11 +1,6 @@
 package com.poscodx.mysite.controller;
 
-import com.poscodx.mysite.service.GuestbookService;
-import com.poscodx.mysite.vo.GuestbookVo;
-
 import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,40 +10,43 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.poscodx.mysite.service.GuestbookService;
+import com.poscodx.mysite.vo.GuestbookVo;
+
 @Controller
 @RequestMapping("/guestbook")
 public class GuestbookController {
 	@Autowired
 	private GuestbookService guestbookService;
-
+	
 	@RequestMapping("")
 	public String main(Model model) {
 		List<GuestbookVo> list = guestbookService.getContentsList();
 		model.addAttribute("list", list);
-		
-        return "guestbook/main";
-	}
-	
-	@RequestMapping("add")
-	public String add(GuestbookVo vo) {
-		guestbookService.addContents(vo);
-		return "redirect:/guestbook";
+		return "guestbook/main";
 	}
 
-	@RequestMapping(value="/deleteform/{no}", method=RequestMethod.GET) // delete form
+	@RequestMapping("/ajax")
+	public String ajax(Model model) {
+		return "guestbook/main-ajax";
+	}
+	
+	@RequestMapping(value="/delete/{no}", method=RequestMethod.GET)
 	public String delete(@PathVariable("no") Long no, Model model) {
 		model.addAttribute("no", no);
 		return "guestbook/delete";
 	}
 
-	@RequestMapping(value="/delete/{no}", method=RequestMethod.POST) // delete action
+	@RequestMapping(value="/delete/{no}", method=RequestMethod.POST)
 	public String delete(@PathVariable("no") Long no, @RequestParam(value="password", required=true, defaultValue="") String password) {
-		boolean result = guestbookService.deleteContents(no, password);
-	
-		if(result) { // 비밀번호 일치 - 삭제 성공 
-			return "redirect:/guestbook";
-		} else { // 비밀번호불일치 - 삭제 실패 
-			return "redirect:/guestbook/deleteform/" + no;
-		}	
+		guestbookService.deleteContents(no, password);
+		return "redirect:/guestbook";
 	}
+
+	@RequestMapping("add")
+	public String add(GuestbookVo vo) {
+		guestbookService.addContents(vo);
+		return "redirect:/guestbook";
+	}
+	
 }

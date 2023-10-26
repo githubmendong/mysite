@@ -3,8 +3,7 @@ package com.poscodx.mysite.vo;
 public class GalleryVo {
 	private Long no;
 	private String comment;
-	private String image_url;
-	
+	private String imageUrl;
 	public Long getNo() {
 		return no;
 	}
@@ -17,15 +16,14 @@ public class GalleryVo {
 	public void setComment(String comment) {
 		this.comment = comment;
 	}
-	public String getImage_url() {
-		return image_url;
+	public String getImageUrl() {
+		return imageUrl;
 	}
-	public void setImage_url(String image_url) {
-		this.image_url = image_url;
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
 	}
-	
 	@Override
 	public String toString() {
-		return "GalleryVo [no=" + no + ", comment=" + comment + ", image_url=" + image_url + "]";
+		return "GalleryVo [no=" + no + ", comment=" + comment + ", imageUrl=" + imageUrl + "]";
 	}
 }

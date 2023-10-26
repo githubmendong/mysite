@@ -10,7 +10,6 @@ import com.poscodx.mysite.vo.GuestbookVo;
 
 @Service
 public class GuestbookService {
-
 	@Autowired
 	private GuestbookRepository guestbookRepository;
 
@@ -22,8 +21,7 @@ public class GuestbookService {
 		return guestbookRepository.deleteByNoAndPassword(no, password);
 	}
 	
-	public Boolean addContents(GuestbookVo vo) { 
+	public Boolean addContents(GuestbookVo vo) {
 		return guestbookRepository.insert(vo);
 	}
-
 }

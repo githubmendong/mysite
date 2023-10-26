@@ -17,7 +17,6 @@ import com.poscodx.mysite.exception.FileUploadServiceException;
 @Service
 @PropertySource("classpath:web/fileupload/fileupload.properties")
 public class FileUploadService {
-	
 	@Autowired
 	private Environment env;
 	

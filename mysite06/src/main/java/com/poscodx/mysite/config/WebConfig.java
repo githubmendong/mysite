@@ -21,6 +21,7 @@ import com.poscodx.mysite.security.LogoutInterceptor;
 
 @SpringBootConfiguration
 public class WebConfig implements WebMvcConfigurer {
+
 	@Bean
 	public ViewResolver viewResolver() {
 		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
@@ -29,7 +30,7 @@ public class WebConfig implements WebMvcConfigurer {
 		viewResolver.setSuffix(".jsp");
 		viewResolver.setExposeContextBeansAsAttributes(true);
 		viewResolver.setExposedContextBeanNames("site");
-		
+				
 		return viewResolver;
 	}
 	
@@ -38,7 +39,7 @@ public class WebConfig implements WebMvcConfigurer {
 	public ApplicationContextEventListener applicationContextEventListener() {
 		return new ApplicationContextEventListener();
 	}
-	                                                 
+	
 	// Argument Resolver
 	@Bean
 	public HandlerMethodArgumentResolver handlerMethodArgumentResolver() {

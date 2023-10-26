@@ -14,11 +14,6 @@ public class UserRepository {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	public Boolean insert(UserVo vo) {
-		int count = sqlSession.insert("user.insert", vo);
-		return count == 1;
-	}
-	
 	public UserVo findByEmailAndPassword(String email, String password) {
 		Map<String, Object> map = new HashMap<>();
 		map.put("email", email);
@@ -27,11 +22,20 @@ public class UserRepository {
 		return sqlSession.selectOne("user.findByEmailAndPassword", map);
 	}
 	
-	public UserVo findByNo(long no) {
+	public UserVo findByNo(Long no) {
 		return sqlSession.selectOne("user.findByNo", no);
+	}
+
+	public UserVo findByEmail(String email) {
+		return sqlSession.selectOne("user.findByEmail", email);
 	}
 	
 	public void update(UserVo vo) {
 		sqlSession.update("user.update", vo);
+	}
+	
+	public Boolean insert(UserVo vo) {
+		int count = sqlSession.insert("user.insert", vo);
+		return count == 1;
 	}
 }
